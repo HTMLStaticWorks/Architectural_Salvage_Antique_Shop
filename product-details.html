@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oak Estate Door - Product Details | Heritage Salvage</title>
+    <meta name="description" content="Detailed measurements and historical background for our unique Oak Estate Door. Reclaimed architectural salvage.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <style>
+        .product-gallery {
+            display: grid;
+            gap: var(--space-2);
+        }
+        .main-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+        }
+        .thumbnails {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-2);
+        }
+        .thumb {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+        }
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: var(--space-4);
+        }
+        .specs-table td {
+            padding: var(--space-2) 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .specs-table td:first-child {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .enquiry-box {
+            background-color: var(--secondary-color);
+            padding: var(--space-4);
+            border: 2px solid var(--accent-color);
+            margin-top: var(--space-4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Heritage Salvage Logo" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home-2.html">Home 2</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="rtl.html">RTL</a></li>
+                <li><button id="theme-toggle" aria-label="Toggle Dark Mode">☀️</button></li>
+            </ul>
+            <div class="mobile-toggle">☰</div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="container" style="padding-top: var(--space-3); color: var(--text-muted); font-size: 0.875rem;">
+        <a href="shop.html">Shop</a> / <a href="shop.html?cat=doors">Doors</a> / Oak Estate Door
+    </div>
+
+    <!-- Product Detail Section -->
+    <main class="section">
+        <div class="container grid grid-cols-2">
+            <!-- Left: Gallery -->
+            <div class="product-gallery">
+                <img src="https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?auto=format&fit=crop&q=80&w=1000" alt="Oak Estate Door Main" class="main-image">
+                <div class="thumbnails">
+                    <img src="https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?auto=format&fit=crop&q=80&w=200" alt="Thumb 1" class="thumb">
+                    <img src="https://images.unsplash.com/photo-1527672829624-ef31748248bd?auto=format&fit=crop&q=80&w=200" alt="Thumb 2" class="thumb">
+                    <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=200" alt="Thumb 3" class="thumb">
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&q=80&w=200" alt="Thumb 4" class="thumb">
+                </div>
+            </div>
+
+            <!-- Right: Info -->
+            <div class="product-info">
+                <span style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Item ID: #ARCH-4421</span>
+                <h1 style="font-size: 3rem; margin-top: var(--space-1);">Oak Estate Door</h1>
+                <p class="product-price" style="font-size: 2rem;">$850.00</p>
+                
+                <p style="margin: var(--space-4) 0; font-size: 1.1rem; line-height: 1.8;">
+                    This magnificent 1920s interior door was salvaged from a colonial-style manor in Pennsylvania. Featuring deep recessed panels and the original quarter-sawn oak grain, it carries the weight and character of a century. The wood has been stabilized and cleaned, preserving the authentic patina.
+                </p>
+
+                <div style="background-color: #fff9e6; padding: var(--space-2); border-left: 4px solid var(--accent-color); margin-bottom: var(--space-4);">
+                    <strong>NOTE:</strong> Only one piece available. Once sold, this item cannot be restocked.
+                </div>
+
+                <h3>Measurements</h3>
+                <table class="specs-table">
+                    <tr><td>Height</td><td>203.2 cm (80")</td></tr>
+                    <tr><td>Width</td><td>81.3 cm (32")</td></tr>
+                    <tr><td>Depth</td><td>4.4 cm (1.75")</td></tr>
+                    <tr><td>Material</td><td>Quarter-sawn Oak, Iron Hardware</td></tr>
+                    <tr><td>Condition</td><td>Restored Antique (A-Grade)</td></tr>
+                </table>
+
+                <div style="display: flex; gap: var(--space-2);">
+                    <button class="btn btn-primary" style="flex: 2;">Add to Cart</button>
+                    <button class="btn btn-outline" style="flex: 1;">Save to List</button>
+                </div>
+
+                <div class="enquiry-box">
+                    <h4>Direct Enquiry</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: var(--space-2);">Interested in shipping or restoration for this specific piece?</p>
+                    <a href="contact.html?item=ARCH-4421" class="btn btn-primary btn-sm" style="display: block; width: 100%;">Inquire About This Piece</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Related Products -->
+    <section class="section" style="background-color: var(--border-color);">
+        <div class="container">
+            <h2 class="vintage-title">Similar History</h2>
+            <div class="grid grid-cols-4" style="margin-top: var(--space-4);">
+                <div class="product-card">
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1540306307466-f33aa6fc48c4?auto=format&fit=crop&q=80&w=400"></div>
+                    <h3>Brass Knocker</h3>
+                    <p class="product-price">$120</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1542728929-14a3559a6903?auto=format&fit=crop&q=80&w=400"></div>
+                    <h3>Pendant Light</h3>
+                    <p class="product-price">$245</p>
+                </div>
+                <!-- ... others ... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div>
+                <a href="index.html"><img src="assets/images/logo-light.svg" alt="Heritage Salvage" class="footer-logo-img"></a>
+                <p>Preserving architectural history since 1984.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul style="padding: 0;">
+                    <li><a href="shop.html">Shop All</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="margin-top: var(--space-5); border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--space-3); text-align: center;">
+            <p>&copy; 2026 Heritage Salvage. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

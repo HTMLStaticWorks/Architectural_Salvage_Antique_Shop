@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architectural Salvage & Antique Shop - Shop Collection</title>
+  <meta name="description" content="Browse our curated collection of architectural salvage and antique furniture.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    .shop-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-6);
+      justify-content: center;
+    }
+    .filter-btn {
+      padding: var(--space-1) var(--space-3);
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-size: 0.9rem;
+      transition: all var(--transition-fast);
+      cursor: pointer;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: HEADER SECTION -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">Salvage & Co.</a>
+      
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="home-2.html">Home 2</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="categories.html">Categories</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Tools Toggles -->
+        <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button id="rtlToggle" class="icon-btn" aria-label="Toggle RTL">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 9V3h-6"></path><path d="M3 15v6h6"></path><path d="M21 3l-7.5 7.5"></path><path d="M3 21l7.5-7.5"></path>
+          </svg>
+        </button>
+
+        <button class="hamburger-menu" aria-label="Open Mobile Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: HERO SECTION -->
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1584622146465-9eb2794eb849?q=80&w=2070&auto=format&fit=crop'); min-height: 40vh;">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="fade-in">Explore Our Collection</h1>
+      <p class="fade-in" style="animation-delay: 0.1s">Every piece unique, every item steeped in history.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: MAIN CONTENT SECTION -->
+  <main class="main-content-section section-padding">
+    <div class="container">
+      
+      <!-- Filters -->
+      <div class="shop-filters">
+        <button class="filter-btn active">All Items</button>
+        <button class="filter-btn">Furniture</button>
+        <button class="filter-btn">Lighting</button>
+        <button class="filter-btn">Hardware</button>
+        <button class="filter-btn">Decor</button>
+      </div>
+
+      <div class="grid-4">
+        <!-- Shop Item 1 -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=1000&auto=format&fit=crop" alt="Victorian Armchair">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Victorian Armchair</h3>
+            <p class="card-desc">Restored tufted leather armchair with carved walnut frame.</p>
+            <div class="card-price">$1,250</div>
+            <a href="product-details.html" class="btn btn-primary" style="width: 100%;">View Details</a>
+          </div>
+        </div>
+
+        <!-- Shop Item 2 -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1506898667547-42e22a46e125?q=80&w=1000&auto=format&fit=crop" alt="Vintage Typewriter">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Underwood Typewriter</h3>
+            <p class="card-desc">Working 1930s Underwood model 5.</p>
+            <div class="card-price">$450</div>
+            <a href="product-details.html" class="btn btn-primary" style="width: 100%;">View Details</a>
+          </div>
+        </div>
+
+        <!-- Shop Item 3 -->
+        <div class="card">
+          <div class="badge">Rare</div>
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1582239062310-75217855fe09?q=80&w=1000&auto=format&fit=crop" alt="Brass Scale">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Apothecary Scale</h3>
+            <p class="card-desc">Complete set of English brass weighing scales.</p>
+            <div class="card-price">$320</div>
+            <a href="product-details.html" class="btn btn-primary" style="width: 100%;">View Details</a>
+          </div>
+        </div>
+
+        <!-- Shop Item 4 -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544457070-4cd773b4d71e?q=80&w=1000&auto=format&fit=crop" alt="Antique Mirror">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Giltwood Mirror</h3>
+            <p class="card-desc">Large French Louis Philippe style mirror.</p>
+            <div class="card-price">$890</div>
+            <a href="product-details.html" class="btn btn-primary" style="width: 100%;">View Details</a>
+          </div>
+        </div>
+        
+        <!-- Shop Item 5 -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?q=80&w=1000&auto=format&fit=crop" alt="Chesterfield Sofa">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Chesterfield Sofa</h3>
+            <p class="card-desc">Oxblood leather sofa, generously tufted.</p>
+            <div class="card-price">$2,400</div>
+            <a href="product-details.html" class="btn btn-primary" style="width: 100%;">View Details</a>
+          </div>
+        </div>
+
+        <!-- Shop Item 6 -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1507133750074-ce44abb3a746?q=80&w=1000&auto=format&fit=crop" alt="Pendant Light">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Industrial Pendant</h3>
+            <p class="card-desc">Reclaimed factory light with enclosed glass.</p>
+            <div class="card-price">$180</div>
+            <a href="product-details.html" class="btn btn-primary" style="width: 100%;">View Details</a>
+          </div>
+        </div>
+
+        <!-- Shop Item 7 -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=1000&auto=format&fit=crop" alt="Rustic Table">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Farmhouse Table</h3>
+            <p class="card-desc">Pine dining table reclaimed from a French barn.</p>
+            <div class="card-price">$1,100</div>
+            <a href="product-details.html" class="btn btn-primary" style="width: 100%;">View Details</a>
+          </div>
+        </div>
+
+        <!-- Shop Item 8 -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1000&auto=format&fit=crop" alt="Brass Handles">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Brass Pulls Set</h3>
+            <p class="card-desc">Set of 12 original Victorian drawer pulls.</p>
+            <div class="card-price">$120</div>
+            <a href="product-details.html" class="btn btn-primary" style="width: 100%;">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div style="display: flex; justify-content: center; margin-top: var(--space-8); gap: var(--space-2);">
+        <button class="icon-btn">1</button>
+        <button class="icon-btn" style="background: var(--color-primary); color: #fff; border-color: var(--color-primary);">2</button>
+        <button class="icon-btn">3</button>
+        <button class="icon-btn">→</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SECTION 4: SUPPORTING SECTION & FOOTER -->
+  <section class="supporting-section">
+    <!-- Value Add / Newsletter Signup (Unique per page style requirement) -->
+    <div class="section-padding">
+      <div class="container supporting-content">
+        <h2>Don't Miss A Rare Find</h2>
+        <p>Our unique items sell fast. Subscribe to get early access to our weekly restocks.</p>
+        <div style="margin-top: 2rem; max-width: 400px; margin-inline: auto; display: flex; gap: var(--space-2);">
+          <input type="email" class="form-control" placeholder="Enter your email" style="margin-bottom: 0;">
+          <button class="btn btn-primary">Join</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer directly inside the Supporting Section block -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary);">Salvage & Co.</h4>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="shop.html">Shop All</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="gallery.html">Portfolio</a></li>
+              <li><a href="blog.html">Stories</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">Shipping Details</a></li>
+              <li><a href="#">Returns Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Visit Us</h4>
+            <ul>
+              <li style="color: rgba(255,255,255,0.7)">123 Vintage Row<br>London, UK W11 2BQ</li>
+              <li style="color: rgba(255,255,255,0.7)">+44 (0) 20 1234 5678</li>
+              <li style="color: rgba(255,255,255,0.7)">hello@salvageandco.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Salvage & Co. All rights reserved. Designed with precision.</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

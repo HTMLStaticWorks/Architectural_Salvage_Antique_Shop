@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architectural Salvage & Antique Shop - Testimonials</title>
+  <meta name="description" content="Read reviews and testimonials from our collectors and restoration clients.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    .testimonial-card {
+      padding: var(--space-6);
+      border-radius: 8px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      text-align: center;
+      transition: box-shadow var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .testimonial-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary);
+    }
+    .quote-icon {
+      font-size: 3rem;
+      color: var(--color-primary);
+      opacity: 0.3;
+      font-family: var(--font-heading);
+      line-height: 1;
+      margin-bottom: var(--space-2);
+    }
+    .testimonial-text {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--color-text);
+      line-height: 1.8;
+      margin-bottom: var(--space-4);
+      flex: 1;
+    }
+    .testimonial-author h4 {
+      font-size: 1rem;
+      margin-bottom: 2px;
+      font-family: var(--font-body);
+    }
+    .testimonial-author span {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: HEADER SECTION -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">Salvage & Co.</a>
+      
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="home-2.html">Home 2</a>
+        <a href="shop.html">Shop</a>
+        <a href="categories.html">Categories</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Tools Toggles -->
+        <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button id="rtlToggle" class="icon-btn" aria-label="Toggle RTL">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 9V3h-6"></path><path d="M3 15v6h6"></path><path d="M21 3l-7.5 7.5"></path><path d="M3 21l7.5-7.5"></path>
+          </svg>
+        </button>
+        <button class="hamburger-menu" aria-label="Open Mobile Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: HERO SECTION -->
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=2070&auto=format&fit=crop'); min-height: 40vh;">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="fade-in">What Our Collectors Say</h1>
+      <p class="fade-in" style="animation-delay: 0.1s">Hear from architects, designers, and private collectors worldwide.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: MAIN CONTENT SECTION -->
+  <main class="main-content-section section-padding">
+    <div class="container">
+      
+      <div class="grid-3">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">The quality of the restorations is incredible. My Louis XIV commode is easily the centerpiece of my living room. They maintained the original patina beautifully.</p>
+          <div class="testimonial-author">
+            <h4>Eleanor R.</h4>
+            <span>Private Collector, Paris</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">Found the exact Victorian hardware I needed for my home renovation project. Flawless service, expert advice, and perfectly secure packaging for delivery.</p>
+          <div class="testimonial-author">
+            <h4>Thomas C.</h4>
+            <span>Architect, London</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">A hidden gem! Their lighting selection is unmatched. I’m deeply impressed by their transparency on origins. The rewired industrial pendants completely transformed our studio.</p>
+          <div class="testimonial-author">
+            <h4>Amelia S.</h4>
+            <span>Interior Designer, New York</span>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">I was hesitant about shipping a 19th-century mirror overseas, but their crating and white-glove delivery service was immaculate. It arrived in pristine condition.</p>
+          <div class="testimonial-author">
+            <h4>James W.</h4>
+            <span>Toronto</span>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">The authenticity of their architectural salvage pieces is unmatched. We sourced multiple stained glass windows for our restaurant build, and they are breathtaking.</p>
+          <div class="testimonial-author">
+            <h4>Marcus T.</h4>
+            <span>Restaurateur, Berlin</span>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">Their team has a rare combination of historical knowledge and artisanal skill. They don't just sell antiques; they preserve heritage and curate absolute perfection.</p>
+          <div class="testimonial-author">
+            <h4>Dr. Helen K.</h4>
+            <span>Historian, Edinburgh</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SECTION 4: SUPPORTING SECTION & FOOTER -->
+  <section class="supporting-section">
+    <!-- Value Add / Review CTA Block -->
+    <div class="section-padding">
+      <div class="container supporting-content">
+        <h2>Have a story to share?</h2>
+        <p>We love seeing our salvaged pieces in their new homes. Submit your experience and a photo to be featured.</p>
+        <button class="btn btn-primary" style="margin-top: var(--space-4);">Submit a Review</button>
+      </div>
+    </div>
+    
+    <!-- Footer directly inside the Supporting Section block -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary);">Salvage & Co.</h4>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="shop.html">Shop All</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="gallery.html">Portfolio</a></li>
+              <li><a href="blog.html">Stories</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">Shipping Details</a></li>
+              <li><a href="#">Returns Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Visit Us</h4>
+            <ul>
+              <li style="color: rgba(255,255,255,0.7)">123 Vintage Row<br>London, UK W11 2BQ</li>
+              <li style="color: rgba(255,255,255,0.7)">+44 (0) 20 1234 5678</li>
+              <li style="color: rgba(255,255,255,0.7)">hello@salvageandco.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Salvage & Co. All rights reserved. Designed with precision.</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

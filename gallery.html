@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architectural Salvage & Antique Shop - Gallery</title>
+  <meta name="description" content="View our portfolio of restored architectural pieces and antique furniture in their new homes.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    /* Masonry-style Grid for Gallery */
+    .masonry-grid {
+      column-count: 1;
+      column-gap: var(--space-4);
+    }
+    @media (min-width: 640px) {
+      .masonry-grid { column-count: 2; }
+    }
+    @media (min-width: 1024px) {
+      .masonry-grid { column-count: 3; }
+    }
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: var(--space-4);
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .masonry-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform var(--transition-slow);
+    }
+    .masonry-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      padding: var(--space-4) var(--space-3);
+      color: #fff;
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+    }
+    .masonry-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: HEADER SECTION -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">Salvage & Co.</a>
+      
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="home-2.html">Home 2</a>
+        <a href="shop.html">Shop</a>
+        <a href="categories.html">Categories</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Tools Toggles -->
+        <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button id="rtlToggle" class="icon-btn" aria-label="Toggle RTL">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 9V3h-6"></path><path d="M3 15v6h6"></path><path d="M21 3l-7.5 7.5"></path><path d="M3 21l7.5-7.5"></path>
+          </svg>
+        </button>
+        <button class="hamburger-menu" aria-label="Open Mobile Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: HERO SECTION -->
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop'); min-height: 40vh;">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="fade-in">Portfolio of Restorations</h1>
+      <p class="fade-in" style="animation-delay: 0.1s">See how our historical pieces breathe life into modern environments.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: MAIN CONTENT SECTION -->
+  <main class="main-content-section section-padding">
+    <div class="container">
+      
+      <div class="masonry-grid">
+        <!-- Item 1 -->
+        <div class="masonry-item">
+          <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd64bd9b?q=80&w=800&auto=format&fit=crop" alt="Restored Fireplace">
+          <div class="gallery-overlay">
+            <h3 style="color:#fff; font-size: 1.25rem;">Victorian Marble Surround</h3>
+            <p style="opacity:0.8; margin-bottom:0">Installed in a Kensington Townhouse</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="masonry-item">
+          <img src="https://images.unsplash.com/photo-1628198132049-cfdb2fdcb11e?q=80&w=800&auto=format&fit=crop" alt="Pendant Lighting Kitchen">
+          <div class="gallery-overlay">
+            <h3 style="color:#fff; font-size: 1.25rem;">Industrial Factory Pendants</h3>
+            <p style="opacity:0.8; margin-bottom:0">Soho Loft Renovation</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="masonry-item">
+          <img src="https://images.unsplash.com/photo-1540574163026-643ea20d25b5?q=80&w=800&auto=format&fit=crop" alt="Leather Chair Study">
+          <div class="gallery-overlay">
+            <h3 style="color:#fff; font-size: 1.25rem;">Chesterfield Library</h3>
+            <p style="opacity:0.8; margin-bottom:0">Private Estate, Surrey</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="masonry-item">
+          <img src="https://images.unsplash.com/photo-1616137500589-9a67a06ee063?q=80&w=800&auto=format&fit=crop" alt="Rustic Table Dining">
+          <div class="gallery-overlay">
+            <h3 style="color:#fff; font-size: 1.25rem;">Monastery Dining Table</h3>
+            <p style="opacity:0.8; margin-bottom:0">Cotswolds Country Retreat</p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="masonry-item">
+          <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=800&auto=format&fit=crop" alt="Stained Glass Door">
+          <div class="gallery-overlay">
+            <h3 style="color:#fff; font-size: 1.25rem;">Edwardian Stained Glass Entry</h3>
+            <p style="opacity:0.8; margin-bottom:0">Restored London Frontage</p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="masonry-item">
+          <img src="https://images.unsplash.com/photo-1594042861619-3286b0da1bc1?q=80&w=800&auto=format&fit=crop" alt="Antique Mirror Bathroom">
+          <div class="gallery-overlay">
+            <h3 style="color:#fff; font-size: 1.25rem;">Giltwood Overmantel Mirror</h3>
+            <p style="opacity:0.8; margin-bottom:0">Boutique Hotel Vanity Suite</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-8);">
+        <button class="btn btn-outline">Load More Projects</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SECTION 4: SUPPORTING SECTION & FOOTER -->
+  <section class="supporting-section">
+    <!-- Value Add / Statistics Block -->
+    <div class="section-padding">
+      <div class="container">
+        <div class="grid-3" style="text-align: center;">
+          <div>
+            <div style="font-family: var(--font-heading); font-size: 3rem; color: var(--color-primary); font-weight: 700;">2,500+</div>
+            <p style="color: var(--color-text-muted);">Pieces Restored</p>
+          </div>
+          <div>
+            <div style="font-family: var(--font-heading); font-size: 3rem; color: var(--color-primary); font-weight: 700;">25</div>
+            <p style="color: var(--color-text-muted);">Years of Expertise</p>
+          </div>
+          <div>
+            <div style="font-family: var(--font-heading); font-size: 3rem; color: var(--color-primary); font-weight: 700;">180+</div>
+            <p style="color: var(--color-text-muted);">Estates Salvaged</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer directly inside the Supporting Section block -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary);">Salvage & Co.</h4>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="shop.html">Shop All</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="gallery.html">Portfolio</a></li>
+              <li><a href="blog.html">Stories</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">Shipping Details</a></li>
+              <li><a href="#">Returns Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Visit Us</h4>
+            <ul>
+              <li style="color: rgba(255,255,255,0.7)">123 Vintage Row<br>London, UK W11 2BQ</li>
+              <li style="color: rgba(255,255,255,0.7)">+44 (0) 20 1234 5678</li>
+              <li style="color: rgba(255,255,255,0.7)">hello@salvageandco.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Salvage & Co. All rights reserved. Designed with precision.</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هيريتاج سالفاج | كنوز من الماضي</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <style>
+        body { font-family: 'Amiri', serif; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Heritage Salvage Logo" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="shop.html">المتجر</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="rtl.html">RTL</a></li>
+                <li><button id="theme-toggle">☀️</button></li>
+            </ul>
+            <div class="mobile-toggle">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero.png') center/cover no-repeat; height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">
+        <div class="container">
+            <h1 style="font-size: 3.5rem;">الحفاظ على الماضي، بناء المستقبل</h1>
+            <p style="font-size: 1.25rem;">قطع أثرية ومواد بناء مستصلحة للمصممين المتميزين.</p>
+            <div style="display: flex; gap: var(--space-2); justify-content: center; margin-top: var(--space-3);">
+                <a href="shop.html" class="btn btn-primary">تسوق المجموعة</a>
+                <a href="about.html" class="btn btn-outline" style="border-color: white; color: white;">قصتنا</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: var(--space-5);">
+                <h2 class="vintage-title">مجموعات مختارة</h2>
+            </div>
+            <div class="grid grid-cols-3">
+                <div class="product-card">
+                    <div class="product-image"><img src="assets/images/cat-doors.png"></div>
+                    <h3>أبواب أثرية</h3>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="assets/images/cat-lighting.png"></div>
+                    <h3>إضاءة عتيقة</h3>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="assets/images/cat-hardware.png"></div>
+                    <h3>مقابض ومفصلات</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 هيريتاج سالفاج. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

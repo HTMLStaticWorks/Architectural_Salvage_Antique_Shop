@@ -1,0 +1,59 @@
+/* ==========================================================================
+   DARK MODE - ARCHITECTURAL SALVAGE
+   ========================================================================== */
+
+/* The dark class is appended to <html> via JS */
+html.dark {
+  /* Dark Theme Colors */
+  --color-bg: #121212;
+  --color-surface: #1e1e1e;
+  --color-surface-hover: #2a2a2a;
+  --color-text: #e6e1d8;
+  --color-text-muted: #a09a93;
+  --color-primary: #d4af37; /* Brighter gold for dark mode contrast */
+  --color-primary-hover: #b8952b;
+  --color-border: #333333;
+  --color-overlay: rgba(0, 0, 0, 0.8);
+  --color-footer-bg: #0a0a0a;
+
+  /* Shadows adjust for dark mode */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.8);
+}
+
+/* Component Overrides for Dark Mode */
+
+html.dark .site-header {
+  background-color: rgba(30, 30, 30, 0.95);
+}
+
+html.dark .card-img-wrap {
+  background: #333;
+}
+
+html.dark .form-control:focus {
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+html.dark .btn-primary {
+  color: #121212; /* Dark text on bright gold looks better */
+  font-weight: 600;
+}
+
+html.dark .btn-primary:hover {
+  color: #121212;
+}
+
+/* Image filters to lower brightness slightly in dark mode to reduce eye strain */
+html.dark img:not(.logo-img) {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+html.dark .skeleton {
+  background: #2a2a2a;
+}
+
+html.dark .skeleton::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+}

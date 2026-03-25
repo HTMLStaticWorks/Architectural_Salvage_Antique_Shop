@@ -1,0 +1,46 @@
+/* ==========================================================================
+   RTL MODE - ARCHITECTURAL SALVAGE
+   ========================================================================== */
+
+/* Required when toggling RTL */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Switch Margin Directions */
+html[dir="rtl"] .btn {
+  /* No specific gap/margin changes needed if flex gap is used, gap handles RTL automatically! */
+}
+
+/* Adjust Off-Canvas Menu for RTL */
+html[dir="rtl"] .nav-menu {
+  left: auto;
+  right: 100%;
+}
+
+@media (max-width: 1023px) {
+  html[dir="rtl"] .nav-menu.open {
+    right: 0;
+    left: auto;
+  }
+}
+
+/* Ensure centering rules aren't affected */
+html[dir="rtl"] .card-body {
+  text-align: center;
+}
+
+html[dir="rtl"] .form-group {
+  text-align: right;
+}
+
+/* Adjust Any Left/Right specific positioning */
+html[dir="rtl"] .badge {
+  right: auto;
+  left: var(--space-2);
+}
+
+html[dir="rtl"] .hero-content {
+  /* If aligning was left/right instead of center */
+}

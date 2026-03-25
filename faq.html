@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architectural Salvage & Antique Shop - FAQ</title>
+  <meta name="description" content="Frequently asked questions about our restoration process, shipping, and authenticating antiques.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      margin-bottom: var(--space-3);
+      overflow: hidden;
+      transition: box-shadow var(--transition-fast);
+    }
+    .faq-item:hover {
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-btn {
+      width: 100%;
+      padding: var(--space-4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      cursor: pointer;
+      text-align: left;
+    }
+    html[dir="rtl"] .faq-btn {
+      text-align: right;
+    }
+    .faq-content {
+      padding: 0 var(--space-4);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-normal), padding var(--transition-normal);
+      color: var(--color-text-muted);
+    }
+    .faq-item.active .faq-content {
+      padding: 0 var(--space-4) var(--space-4) var(--space-4);
+      max-height: 500px;
+    }
+    .faq-icon {
+      transition: transform var(--transition-fast);
+      color: var(--color-primary);
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: HEADER SECTION -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">Salvage & Co.</a>
+      
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="home-2.html">Home 2</a>
+        <a href="shop.html">Shop</a>
+        <a href="categories.html">Categories</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Tools Toggles -->
+        <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button id="rtlToggle" class="icon-btn" aria-label="Toggle RTL">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 9V3h-6"></path><path d="M3 15v6h6"></path><path d="M21 3l-7.5 7.5"></path><path d="M3 21l7.5-7.5"></path>
+          </svg>
+        </button>
+        <button class="hamburger-menu" aria-label="Open Mobile Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: HERO SECTION -->
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1549449852-7108920155b9?q=80&w=2070&auto=format&fit=crop'); min-height: 40vh;">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="fade-in">Questions & Answers</h1>
+      <p class="fade-in" style="animation-delay: 0.1s">Everything you need to know about our sourcing, authentication, and restoration.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: MAIN CONTENT SECTION -->
+  <main class="main-content-section section-padding">
+    <div class="container faq-container">
+      
+      <div class="faq-item">
+        <button class="faq-btn">
+          How do you authenticate your antiques?
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-content">
+          <p>Our lead researchers use a combination of provenance tracing, material analysis, and stylistic dating. Every piece priced over $500 comes with a Certificate of Authenticity signed by our lead historian detailing its origin and estimated era.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">
+          Do you ship international orders?
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-content">
+          <p>Yes. We use specialized white-glove crates for fragile items (like mirrors and lighting) globally. Please note that customs fees and import duties are the responsibility of the buyer.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">
+          Can I request a custom restoration?
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-content">
+          <p>Absolutely. If a piece in our inventory is in "as-found" condition, we can restore it to your specifications—whether that means a high polish on brass or specific upholstery for seating. Contact us before purchasing to discuss options.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">
+          What is your return policy?
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-content">
+          <p>Due to the unique and fragile nature of antiques, all sales are final. We provide incredibly rigorous condition reports, dimensions, and high-resolution images so you can purchase with total confidence.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">
+          How do you source your inventory?
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-content">
+          <p>We work tightly with European estate liquidators, demolition contractors working on highly historic buildings, and private collectors. Our aim is to rescue items just before they are permanently lost.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SECTION 4: SUPPORTING SECTION & FOOTER -->
+  <section class="supporting-section">
+    <!-- Value Add / Support Contact Block -->
+    <div class="section-padding">
+      <div class="container supporting-content">
+        <h2>Still need help?</h2>
+        <p>If you have specific architectural requirements or need a sourcing partner for your project, our team is ready to assist.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: var(--space-3);">Contact Support</a>
+      </div>
+    </div>
+    
+    <!-- Footer directly inside the Supporting Section block -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary);">Salvage & Co.</h4>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="shop.html">Shop All</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="gallery.html">Portfolio</a></li>
+              <li><a href="blog.html">Stories</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">Shipping Details</a></li>
+              <li><a href="#">Returns Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Visit Us</h4>
+            <ul>
+              <li style="color: rgba(255,255,255,0.7)">123 Vintage Row<br>London, UK W11 2BQ</li>
+              <li style="color: rgba(255,255,255,0.7)">+44 (0) 20 1234 5678</li>
+              <li style="color: rgba(255,255,255,0.7)">hello@salvageandco.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Salvage & Co. All rights reserved. Designed with precision.</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // FAQ Accordion Logic
+    const faqBtns = document.querySelectorAll('.faq-btn');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const parent = btn.parentElement;
+        const isActive = parent.classList.contains('active');
+        
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+        
+        // Open clicked if it wasn't active
+        if(!isActive) {
+          parent.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <!-- Arch / Door Icon -->
+  <path d="M10 52 L10 30 Q10 12 22 12 Q34 12 34 30 L34 52 Z" stroke="#d4af37" stroke-width="2.5" fill="none"/>
+  <line x1="10" y1="52" x2="34" y2="52" stroke="#d4af37" stroke-width="2.5"/>
+  <line x1="22" y1="52" x2="22" y2="38" stroke="#d4af37" stroke-width="1.5"/>
+  <!-- Decorative horizontal rule -->
+  <line x1="40" y1="22" x2="46" y2="22" stroke="#d4af37" stroke-width="1.5"/>
+  <!-- Main Wordmark -->
+  <text x="50" y="26" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#3d2b1f" letter-spacing="2">HERITAGE</text>
+  <text x="50" y="44" font-family="Georgia, serif" font-size="10" font-weight="400" fill="#d4af37" letter-spacing="4">SALVAGE</text>
+  <!-- Decorative dot separator -->
+  <circle cx="22" cy="8" r="2" fill="#d4af37"/>
+</svg>

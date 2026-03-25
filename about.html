@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architectural Salvage & Antique Shop - About Us</title>
+  <meta name="description" content="Learn about our heritage and mission to preserve historical architectural pieces and antiques.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    .story-grid {
+      display: grid;
+      gap: var(--space-8);
+      align-items: center;
+    }
+    .story-img {
+      border-radius: 8px;
+      box-shadow: var(--shadow-md);
+    }
+    @media (min-width: 768px) {
+      .story-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .story-grid.reverse .story-text {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: HEADER SECTION -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">Salvage & Co.</a>
+      
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="home-2.html">Home 2</a>
+        <a href="shop.html">Shop</a>
+        <a href="categories.html">Categories</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Tools Toggles -->
+        <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button id="rtlToggle" class="icon-btn" aria-label="Toggle RTL">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 9V3h-6"></path><path d="M3 15v6h6"></path><path d="M21 3l-7.5 7.5"></path><path d="M3 21l7.5-7.5"></path>
+          </svg>
+        </button>
+
+        <button class="hamburger-menu" aria-label="Open Mobile Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: HERO SECTION -->
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop'); min-height: 40vh;">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="fade-in">Our Heritage</h1>
+      <p class="fade-in" style="animation-delay: 0.1s">Decades of passion for uncovering and preserving architectural history.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: MAIN CONTENT SECTION -->
+  <main class="main-content-section section-padding">
+    <div class="container">
+      
+      <!-- Story 1 -->
+      <div class="story-grid" style="margin-bottom: var(--space-12)">
+        <div class="story-text">
+          <h2 style="font-size: 2rem; color: var(--color-primary); margin-bottom: var(--space-3)">The Beginning</h2>
+          <p>Founded in 1998, Salvage & Co. began as a small workshop dedicated to restoring forgotten Victorian doors. Over time, our appreciation for craftsmanship drove us to seek out pieces across Europe, saving irreplaceable heritage from demolition.</p>
+          <p>We believe that every scuff, patina, and weathering mark tells a story. Our mission is to pass those stories on to you, giving these historical elements a new lease on life in modern homes and commercial spaces.</p>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1491897554428-130a60dd4757?q=80&w=1000&auto=format&fit=crop" alt="Antique Workshop" class="story-img">
+        </div>
+      </div>
+
+      <!-- Story 2 -->
+      <div class="story-grid reverse">
+        <div class="story-text">
+          <h2 style="font-size: 2rem; color: var(--color-primary); margin-bottom: var(--space-3)">Our Restoration Process</h2>
+          <p>We preserve the authenticity of every piece. Our master artisans use traditional techniques, ensuring that brass is lightly polished without removing its age, and wood is treated with natural waxes rather than modern varnishes.</p>
+          <ul style="margin-top: var(--space-3); padding-left: var(--space-3); list-style: disc; color: var(--color-text-muted);">
+            <li style="margin-bottom: var(--space-1)">Sourcing purely from pre-1940s estates.</li>
+            <li style="margin-bottom: var(--space-1)">Conservation over heavy restoration.</li>
+            <li style="margin-bottom: var(--space-1)">Detailed historical documentation for each piece.</li>
+          </ul>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1502472584811-0a2f2feb8968?q=80&w=1000&auto=format&fit=crop" alt="Artisan Restoring Wood" class="story-img">
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SECTION 4: SUPPORTING SECTION & FOOTER -->
+  <section class="supporting-section">
+    <!-- Value Add / Team Block -->
+    <div class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Meet the Curators</h2>
+          <p>The historians and master artisans behind our collection.</p>
+        </div>
+        <div class="grid-3">
+          <!-- Team Member 1 -->
+          <div class="card" style="text-align: center; border: none; background: transparent; box-shadow: none;">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800&auto=format&fit=crop" alt="Sarah Jenkins" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-3);">
+            <h3 style="margin-bottom: 4px;">Sarah Jenkins</h3>
+            <p style="color: var(--color-primary); font-size: 0.9rem;">Lead Historical Researcher</p>
+          </div>
+          <!-- Team Member 2 -->
+          <div class="card" style="text-align: center; border: none; background: transparent; box-shadow: none;">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop" alt="David Miller" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-3);">
+            <h3 style="margin-bottom: 4px;">David Miller</h3>
+            <p style="color: var(--color-primary); font-size: 0.9rem;">Master Restorer</p>
+          </div>
+          <!-- Team Member 3 -->
+          <div class="card" style="text-align: center; border: none; background: transparent; box-shadow: none;">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="Elena Rostova" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto var(--space-3);">
+            <h3 style="margin-bottom: 4px;">Elena Rostova</h3>
+            <p style="color: var(--color-primary); font-size: 0.9rem;">European Acquisitions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer directly inside the Supporting Section block -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary);">Salvage & Co.</h4>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="shop.html">Shop All</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="gallery.html">Portfolio</a></li>
+              <li><a href="blog.html">Stories</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">Shipping Details</a></li>
+              <li><a href="#">Returns Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Visit Us</h4>
+            <ul>
+              <li style="color: rgba(255,255,255,0.7)">123 Vintage Row<br>London, UK W11 2BQ</li>
+              <li style="color: rgba(255,255,255,0.7)">+44 (0) 20 1234 5678</li>
+              <li style="color: rgba(255,255,255,0.7)">hello@salvageandco.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Salvage & Co. All rights reserved. Designed with precision.</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

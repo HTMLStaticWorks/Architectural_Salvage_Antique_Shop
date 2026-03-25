@@ -1,0 +1,36 @@
+/* 
+   Architectural Salvage & Antique Shop - Dark Mode Overrides 
+*/
+
+[data-theme="dark"] {
+  --primary-color: #d4af37; /* Gold/Accent for text */
+  --secondary-color: #2c1e14; /* Darker background */
+  --accent-color: #fdf5e6; /* Cream/Accent */
+  --text-color: #fdf5e6;
+  --text-muted: #a09080;
+  --bg-color: #1a120c;
+  --card-bg: #2a1d15;
+  --border-color: #3d2b1f;
+  
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.5);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.6);
+  --shadow-lg: 0 10px 20px rgba(0,0,0,0.7);
+}
+
+[data-theme="dark"] .btn-primary {
+  background-color: var(--primary-color);
+  color: #1a120c;
+}
+
+[data-theme="dark"] .btn-outline {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .logo {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .navbar {
+  background-color: var(--bg-color);
+}

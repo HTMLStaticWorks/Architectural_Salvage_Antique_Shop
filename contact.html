@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architectural Salvage & Antique Shop - Contact Us</title>
+  <meta name="description" content="Get in touch with Salvage & Co for antique sourcing, restorations, and general inquiries.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    .contact-grid {
+      display: grid;
+      gap: var(--space-8);
+    }
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .contact-info-card {
+      background: var(--color-surface);
+      padding: var(--space-6);
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+      height: 100%;
+    }
+    .map-container {
+      width: 100%;
+      height: 300px;
+      background: #e2e2e2;
+      border-radius: 8px;
+      margin-top: var(--space-4);
+      overflow: hidden;
+      position: relative;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: HEADER SECTION -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">Salvage & Co.</a>
+      
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="home-2.html">Home 2</a>
+        <a href="shop.html">Shop</a>
+        <a href="categories.html">Categories</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Tools Toggles -->
+        <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button id="rtlToggle" class="icon-btn" aria-label="Toggle RTL">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 9V3h-6"></path><path d="M3 15v6h6"></path><path d="M21 3l-7.5 7.5"></path><path d="M3 21l7.5-7.5"></path>
+          </svg>
+        </button>
+        <button class="hamburger-menu" aria-label="Open Mobile Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: HERO SECTION -->
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1588693959881-a1e64627eb32?q=80&w=2070&auto=format&fit=crop'); min-height: 40vh;">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="fade-in">Get in Touch</h1>
+      <p class="fade-in" style="animation-delay: 0.1s">We are here to assist with sourcing, product inquiries, and restoration services.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: MAIN CONTENT SECTION -->
+  <main class="main-content-section section-padding">
+    <div class="container">
+      
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div>
+          <h2 style="font-size: 2rem; margin-bottom: var(--space-4);">Send a Message</h2>
+          <form id="contactForm" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" required placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <select class="form-control" required>
+                <option value="">Select an inquiry type</option>
+                <option value="sourcing">Sourcing Request</option>
+                <option value="product">Product Details</option>
+                <option value="restoration">Restoration Services</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" required placeholder="How can we help you today?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+          </form>
+        </div>
+
+        <!-- Contact Info & Map -->
+        <div>
+          <div class="contact-info-card">
+            <h3 style="font-size: 1.5rem; margin-bottom: var(--space-4); color: var(--color-primary);">Visit Our Gallery</h3>
+            <p style="margin-bottom: var(--space-2);"><strong>Address:</strong><br>123 Vintage Row, Notting Hill<br>London, UK W11 2BQ</p>
+            <p style="margin-bottom: var(--space-2);"><strong>Phone:</strong><br><a href="tel:+442012345678">+44 (0) 20 1234 5678</a></p>
+            <p style="margin-bottom: var(--space-4);"><strong>Email:</strong><br><a href="mailto:hello@salvageandco.com">hello@salvageandco.com</a></p>
+            
+            <h4 style="margin-bottom: var(--space-1);">Opening Hours:</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+              Monday – Friday: 10:00 AM – 6:00 PM<br>
+              Saturday: 11:00 AM – 4:00 PM<br>
+              Sunday: Closed (By Appointment Only)
+            </p>
+
+            <div class="map-container skeleton">
+              <!-- Inline iframe placeholder for map -->
+              <div style="width:100%;height:100%;background:#ccc;display:flex;align-items:center;justify-content:center;color:#666;font-weight:600;font-family:var(--font-heading);font-size:1.2rem;opacity:0.6;">Map Location (London, UK)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SECTION 4: SUPPORTING SECTION & FOOTER -->
+  <section class="supporting-section">
+    <!-- Value Add / FAQ Highlight Block -->
+    <div class="section-padding">
+      <div class="container supporting-content">
+        <h2 style="font-size: 1.5rem;">Looking for quick answers?</h2>
+        <p>Before reaching out, your question might have already been answered in our comprehensive FAQ.</p>
+        <a href="faq.html" class="btn btn-outline" style="margin-top: var(--space-3);">View FAQ</a>
+      </div>
+    </div>
+    
+    <!-- Footer directly inside the Supporting Section block -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary);">Salvage & Co.</h4>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="shop.html">Shop All</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="gallery.html">Portfolio</a></li>
+              <li><a href="blog.html">Stories</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">Shipping Details</a></li>
+              <li><a href="#">Returns Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Visit Us</h4>
+            <ul>
+              <li style="color: rgba(255,255,255,0.7)">123 Vintage Row<br>London, UK W11 2BQ</li>
+              <li style="color: rgba(255,255,255,0.7)">+44 (0) 20 1234 5678</li>
+              <li style="color: rgba(255,255,255,0.7)">hello@salvageandco.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Salvage & Co. All rights reserved. Designed with precision.</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

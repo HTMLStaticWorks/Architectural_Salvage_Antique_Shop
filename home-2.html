@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architectural Salvage & Antique Shop - Home 2</title>
+  <meta name="description" content="Discover premium antique furniture, vintage decor, and architectural salvage pieces with rich history.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    /* Specific Home 2 Hero Layout Overrides */
+    .hero-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      min-height: calc(100vh - var(--header-height));
+    }
+    .hero-split-text {
+      padding: var(--space-8) var(--space-4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: var(--color-bg);
+    }
+    .hero-split-img {
+      min-height: 40vh;
+      background-size: cover;
+      background-position: center;
+    }
+    @media (min-width: 1024px) {
+      .hero-split {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-split-text {
+        padding: var(--space-12) var(--space-8);
+      }
+      .hero-split-img {
+        min-height: auto;
+      }
+    }
+    html.dark .hero-split-text {
+      background-color: var(--color-bg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: HEADER SECTION -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">Salvage & Co.</a>
+      
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="home-2.html" class="active">Home 2</a>
+        <a href="shop.html">Shop</a>
+        <a href="categories.html">Categories</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Tools Toggles -->
+        <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button id="rtlToggle" class="icon-btn" aria-label="Toggle RTL">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 9V3h-6"></path><path d="M3 15v6h6"></path><path d="M21 3l-7.5 7.5"></path><path d="M3 21l7.5-7.5"></path>
+          </svg>
+        </button>
+
+        <button class="hamburger-menu" aria-label="Open Mobile Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: HERO SECTION (Split layout) -->
+  <section class="hero-split">
+    <div class="hero-split-text">
+      <h1 class="fade-in" style="font-size: clamp(2rem, 4vw, 3.5rem)">Redefining Authentic Charm</h1>
+      <p class="fade-in" style="animation-delay: 0.1s; color: var(--color-text-muted); font-size: 1.1rem">We traverse the globe sourcing the finest salvaged materials and antiques. Bring a piece of heritage into your contemporary lifestyle.</p>
+      <div style="display: flex; gap: var(--space-2); margin-top: var(--space-4);" class="fade-in" style="animation-delay: 0.2s">
+        <a href="shop.html" class="btn btn-primary">Shop Latest Arrivals</a>
+        <a href="about.html" class="btn btn-outline">Read Our Story</a>
+      </div>
+    </div>
+    <div class="hero-split-img" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop');"></div>
+  </section>
+
+  <!-- SECTION 3: MAIN CONTENT SECTION -->
+  <main class="main-content-section section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Latest Discoveries</h2>
+        <p>Explore our most recent acquisitions of vintage furniture and architectural accents.</p>
+      </div>
+      
+      <div class="grid-4">
+        <!-- New Arrival 1 -->
+        <div class="card">
+          <div class="badge">New</div>
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=1000&auto=format&fit=crop" alt="Victorian Armchair">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Victorian Armchair</h3>
+            <p class="card-desc">Fully restored tufted leather armchair with carved walnut frame, circa 1880.</p>
+            <div class="card-price">$1,250</div>
+            <a href="product-details.html" class="btn btn-outline">View Details</a>
+          </div>
+        </div>
+        
+        <!-- New Arrival 2 -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1506898667547-42e22a46e125?q=80&w=1000&auto=format&fit=crop" alt="Vintage Typewriter">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Underwood Typewriter</h3>
+            <p class="card-desc">Working 1930s Underwood model 5, cleaned and serviced with new ribbon.</p>
+            <div class="card-price">$450</div>
+            <a href="product-details.html" class="btn btn-outline">View Details</a>
+          </div>
+        </div>
+        
+        <!-- New Arrival 3 -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1582239062310-75217855fe09?q=80&w=1000&auto=format&fit=crop" alt="Brass Scale">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Apothecary Scale</h3>
+            <p class="card-desc">Complete set of English brass weighing scales set upon a mahogany plinth.</p>
+            <div class="card-price">$320</div>
+            <a href="product-details.html" class="btn btn-outline">View Details</a>
+          </div>
+        </div>
+
+        <!-- New Arrival 4 -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544457070-4cd773b4d71e?q=80&w=1000&auto=format&fit=crop" alt="Antique Mirror">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Giltwood Mirror</h3>
+            <p class="card-desc">Large French Louis Philippe style mirror with original mercury glass plate.</p>
+            <div class="card-price">$890</div>
+            <a href="product-details.html" class="btn btn-outline">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- SECTION 4: SUPPORTING SECTION & FOOTER -->
+  <section class="supporting-section">
+    <!-- Value Add / Testimonial Block -->
+    <div class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Loved by Collectors</h2>
+          <p>What our clients say about their reclaimed treasures.</p>
+        </div>
+        <div class="grid-3">
+          <!-- Testimonial -->
+          <div class="card" style="padding: var(--space-4); text-align: center;">
+            <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: var(--space-2);">★★★★★</div>
+            <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-3);">"The quality of the restorations is incredible. My Louis XIV commode is easily the centerpiece of my living room."</p>
+            <h4 style="font-family: var(--font-body); font-size: 1rem;">- Eleanor R.</h4>
+          </div>
+          <!-- Testimonial -->
+          <div class="card" style="padding: var(--space-4); text-align: center;">
+            <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: var(--space-2);">★★★★★</div>
+            <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-3);">"Found the exact Victorian hardware I needed for my home renovation project. Flawless service and delivery."</p>
+            <h4 style="font-family: var(--font-body); font-size: 1rem;">- Thomas C.</h4>
+          </div>
+          <!-- Testimonial -->
+          <div class="card" style="padding: var(--space-4); text-align: center;">
+            <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: var(--space-2);">★★★★★</div>
+            <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-3);">"A hidden gem! Their lighting selection is unmatched. I’m deeply impressed by their transparency on origins."</p>
+            <h4 style="font-family: var(--font-body); font-size: 1rem;">- Amelia S.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer directly inside the Supporting Section block -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary);">Salvage & Co.</h4>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="shop.html">Shop All</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="gallery.html">Portfolio</a></li>
+              <li><a href="blog.html">Stories</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">Shipping Details</a></li>
+              <li><a href="#">Returns Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Visit Us</h4>
+            <ul>
+              <li style="color: rgba(255,255,255,0.7)">123 Vintage Row<br>London, UK W11 2BQ</li>
+              <li style="color: rgba(255,255,255,0.7)">+44 (0) 20 1234 5678</li>
+              <li style="color: rgba(255,255,255,0.7)">hello@salvageandco.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Salvage & Co. All rights reserved. Designed with precision.</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
