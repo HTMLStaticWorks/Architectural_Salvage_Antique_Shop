@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
   
   <!-- Preload Icons/Fonts if needed -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +20,10 @@
   <!-- SECTION 1: HEADER SECTION -->
   <header class="site-header">
     <div class="container header-container">
-      <a href="index.html" class="logo-link">Salvage & Co.</a>
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
+        <span class="logo-text">Heritage Salvage</span>
+      </a>
       
       <nav class="nav-menu">
         <a href="index.html" class="active">Home</a>
@@ -54,11 +58,11 @@
   </header>
 
   <!-- SECTION 2: HERO SECTION -->
-  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1588693959881-a1e64627eb32?q=80&w=2070&auto=format&fit=crop');">
-    <div class="hero-overlay"></div>
+  <section class="hero-section" style="background-image: url('assets/images/hero-bg.png');">
+    <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));"></div>
     <div class="container hero-content">
-      <h1 class="fade-in">Preserving History,<br> One Antique at a Time.</h1>
-      <p class="fade-in" style="animation-delay: 0.1s">Discover beautifully curated architectural salvage and timeless artifacts that bring character and story into modern spaces.</p>
+      <h1 class="fade-in" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">Preserving History,<br> One Antique at a Time.</h1>
+      <p class="fade-in" style="animation-delay: 0.1s; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Discover beautifully curated architectural salvage and timeless artifacts that bring character and story into modern spaces.</p>
       <a href="shop.html" class="btn btn-primary fade-in" style="animation-delay: 0.2s">Explore Collection</a>
     </div>
   </section>
@@ -75,16 +79,12 @@
         <!-- Card 1 -->
         <div class="card">
           <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1549449852-7108920155b9?q=80&w=1000&auto=format&fit=crop" alt="Vintage Doors">
+            <img src="assets/images/restored_doors.png" alt="Restored Victorian Doors">
           </div>
-          <div class="card-body">
-            <div class="card-icon">
-              <!-- Inline SVG door icon placeholder -->
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12"></path><path d="M14 8h8v10h-8"></path><path d="M2 22h20"></path><path d="M10 12h.01"></path><path d="M18 12h.01"></path></svg>
-            </div>
-            <h3 class="card-title">Restored Doors</h3>
-            <p class="card-desc">Oak, mahogany, and pine statement doors from the Victorian and Edwardian periods.</p>
-            <a href="categories.html" class="btn btn-outline">View Doors</a>
+          <div class="card-body" style="text-align: center;">
+            <h3 class="card-title">Restored Victorian Doors</h3>
+            <p class="card-desc">Exquisitely restored solid oak double doors with original carvings and hardware.</p>
+            <a href="shop.html" class="btn btn-outline" style="width: 100%;">Explore Doors</a>
           </div>
         </div>
         
@@ -93,28 +93,22 @@
           <div class="card-img-wrap">
             <img src="https://images.unsplash.com/photo-1581428982868-e410dd047a90?q=80&w=1000&auto=format&fit=crop" alt="Lighting">
           </div>
-          <div class="card-body">
-            <div class="card-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2v1"></path><path d="M12 7v1"></path><path d="M12 7a4.5 4.5 0 0 1 4.5 4.5c0 1.25-.5 2.5-1.5 3.5H9c-1-1-1.5-2.25-1.5-3.5A4.5 4.5 0 0 1 12 7z"></path></svg>
-            </div>
+          <div class="card-body" style="text-align: center;">
             <h3 class="card-title">Antique Lighting</h3>
             <p class="card-desc">Brass chandeliers, industrial pendants, and ornate wall sconces re-wired for modern use.</p>
-            <a href="categories.html" class="btn btn-outline">View Lighting</a>
+            <a href="categories.html" class="btn btn-outline" style="width: 100%;">View Lighting</a>
           </div>
         </div>
         
         <!-- Card 3 -->
         <div class="card">
           <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?q=80&w=1000&auto=format&fit=crop" alt="Architectural Hardware">
+            <img src="assets/images/ornate_hardware.png" alt="Ornate Hardware">
           </div>
-          <div class="card-body">
-            <div class="card-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
-            </div>
+          <div class="card-body" style="text-align: center;">
             <h3 class="card-title">Ornate Hardware</h3>
-            <p class="card-desc">Original cast iron brackets, brass knobs, and vintage cabinet pulls.</p>
-            <a href="categories.html" class="btn btn-outline">View Hardware</a>
+            <p class="card-desc">Original cast iron brackets, brass knobs, and vintage cabinet pulls from rare estates.</p>
+            <a href="categories.html" class="btn btn-outline" style="width: 100%;">View Hardware</a>
           </div>
         </div>
       </div>
@@ -135,12 +129,14 @@
       </div>
     </div>
     
-    <!-- Footer directly inside the Supporting Section block -->
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary);">Salvage & Co.</h4>
+            <div class="footer-logo-wrap">
+              <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
+              <h4 class="logo-text" style="color: var(--color-accent);">Heritage Salvage</h4>
+            </div>
             <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
           </div>
           <div class="footer-col">

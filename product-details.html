@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
     <style>
         .product-gallery {
             display: grid;
@@ -61,8 +62,11 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Heritage Salvage Logo" class="logo-img"></a>
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
+                <span class="logo-text">Heritage Salvage</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="home-2.html">Home 2</a></li>
@@ -152,13 +156,16 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-container">
-            <div>
-                <a href="index.html"><img src="assets/images/logo-light.svg" alt="Heritage Salvage" class="footer-logo-img"></a>
-                <p>Preserving architectural history since 1984.</p>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-logo-wrap">
+              <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
+              <h4 class="logo-text" style="color: var(--color-accent);">Heritage Salvage</h4>
             </div>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
+          </div>
             <div>
                 <h3>Quick Links</h3>
                 <ul style="padding: 0;">

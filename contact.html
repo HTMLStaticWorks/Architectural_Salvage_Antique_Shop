@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +52,10 @@
   <!-- SECTION 1: HEADER SECTION -->
   <header class="site-header">
     <div class="container header-container">
-      <a href="index.html" class="logo-link">Salvage & Co.</a>
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
+        <span class="logo-text">Heritage Salvage</span>
+      </a>
       
       <nav class="nav-menu">
         <a href="index.html">Home</a>
@@ -84,11 +88,11 @@
   </header>
 
   <!-- SECTION 2: HERO SECTION -->
-  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1588693959881-a1e64627eb32?q=80&w=2070&auto=format&fit=crop'); min-height: 40vh;">
-    <div class="hero-overlay"></div>
+  <section class="hero-section" style="background-image: url('assets/images/hero-contact.png'); min-height: 40vh;">
+    <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));"></div>
     <div class="container hero-content">
-      <h1 class="fade-in">Get in Touch</h1>
-      <p class="fade-in" style="animation-delay: 0.1s">We are here to assist with sourcing, product inquiries, and restoration services.</p>
+      <h1 class="fade-in" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">Get in Touch</h1>
+      <p class="fade-in" style="animation-delay: 0.1s; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">We are here to assist with sourcing, product inquiries, and restoration services.</p>
     </div>
   </section>
 
@@ -142,9 +146,13 @@
               Sunday: Closed (By Appointment Only)
             </p>
 
-            <div class="map-container skeleton">
-              <!-- Inline iframe placeholder for map -->
-              <div style="width:100%;height:100%;background:#ccc;display:flex;align-items:center;justify-content:center;color:#666;font-weight:600;font-family:var(--font-heading);font-size:1.2rem;opacity:0.6;">Map Location (London, UK)</div>
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.905001438725!2d-0.21040522339655655!3d51.51493097181513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760fb26f9bedcd%3A0xe54c1ea5cf8230!2sPortobello%20Rd%2C%20London%2C%20UK!5e0!3m2!1sen!2sus!4v1711452000000!5m2!1sen!2sus" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                style="filter: grayscale(1) contrast(1.2) opacity(0.8);"></iframe>
             </div>
           </div>
         </div>
@@ -169,7 +177,10 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary);">Salvage & Co.</h4>
+            <div class="footer-logo-wrap">
+              <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
+              <h4 class="logo-text" style="color: var(--color-accent);">Heritage Salvage</h4>
+            </div>
             <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
           </div>
           <div class="footer-col">

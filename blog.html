@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,7 +78,10 @@
   <!-- SECTION 1: HEADER SECTION -->
   <header class="site-header">
     <div class="container header-container">
-      <a href="index.html" class="logo-link">Salvage & Co.</a>
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
+        <span class="logo-text">Heritage Salvage</span>
+      </a>
       
       <nav class="nav-menu">
         <a href="index.html">Home</a>
@@ -110,11 +114,11 @@
   </header>
 
   <!-- SECTION 2: HERO SECTION -->
-  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?q=80&w=2072&auto=format&fit=crop'); min-height: 40vh;">
-    <div class="hero-overlay"></div>
+  <section class="hero-section" style="background-image: url('assets/images/hero-blog.png'); min-height: 40vh;">
+    <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));"></div>
     <div class="container hero-content">
-      <h1 class="fade-in">Antique Stories & Tips</h1>
-      <p class="fade-in" style="animation-delay: 0.1s">Insights from the world of architectural salvage and conservation.</p>
+      <h1 class="fade-in" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">Antique Stories & Tips</h1>
+      <p class="fade-in" style="animation-delay: 0.1s; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Insights from the world of architectural salvage and conservation.</p>
     </div>
   </section>
 
@@ -174,14 +178,35 @@
             <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read Article</a>
           </div>
         </article>
+
+        <!-- Blog 5 -->
+        <article class="blog-card">
+          <div class="blog-img">
+            <img src="assets/images/Victorian Stained Glass.png" alt="Stained Glass">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">Restoration • Jan 15, 2026</div>
+            <h2 class="blog-title">Victorian Stained Glass</h2>
+            <p class="blog-excerpt">Exploring the delicate process of repairing leaded lights and sourcing period-correct colored glass from the 19th century.</p>
+            <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read Article</a>
+          </div>
+        </article>
+
+        <!-- Blog 6 -->
+        <article class="blog-card">
+          <div class="blog-img">
+            <img src="assets/images/Sourcing Rare Mantelpieces.png" alt="Fireplace Mantel">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">Buying Guide • Jan 05, 2026</div>
+            <h2 class="blog-title">Sourcing Rare Mantelpieces</h2>
+            <p class="blog-excerpt">Our guide to finding the perfect marble or oak fireplace surround and ensuring a seamless fit for your period home restoration.</p>
+            <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read Article</a>
+          </div>
+        </article>
       </div>
 
-      <!-- Pagination -->
-      <div style="display: flex; justify-content: center; margin-top: var(--space-8); gap: var(--space-2);">
-        <button class="icon-btn">1</button>
-        <button class="icon-btn" style="background: var(--color-primary); color: #fff; border-color: var(--color-primary);">2</button>
-        <button class="icon-btn">→</button>
-      </div>
+      <!-- No Pagination (Continuous Gallery Mandate) -->
 
     </div>
   </main>
@@ -207,7 +232,10 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary);">Salvage & Co.</h4>
+            <div class="footer-logo-wrap">
+              <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
+              <h4 class="logo-text" style="color: var(--color-accent);">Heritage Salvage</h4>
+            </div>
             <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
           </div>
           <div class="footer-col">
