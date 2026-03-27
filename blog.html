@@ -24,6 +24,7 @@
       border-radius: 8px;
       overflow: hidden;
       transition: transform var(--transition-normal);
+      height: 100%;
     }
     .blog-card:hover {
       transform: translateY(-5px);
@@ -42,6 +43,10 @@
       display: flex;
       flex-direction: column;
       gap: var(--space-2);
+      flex-grow: 1;
+    }
+    .blog-content .btn {
+      margin-top: auto;
     }
     .blog-meta {
       font-size: 0.8rem;
@@ -71,6 +76,14 @@
       height: 80px;
       border-radius: 50%;
       object-fit: cover;
+    }
+    .collector-narrative .btn-outline {
+      border-color: #fff;
+      color: #fff;
+    }
+    .collector-narrative .btn-outline:hover {
+      background: #fff;
+      color: var(--color-primary);
     }
   </style>
 </head>
@@ -128,7 +141,7 @@
   </header>
 
   <!-- SECTION 2: HERO SECTION -->
-  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1974&auto=format&fit=crop'); min-height: 40vh;">
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1974&auto=format&fit=crop'); min-height: 50vh;">
     <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));"></div>
     <div class="container hero-content">
       <h1 class="fade-in">The Heritage Archive</h1>
@@ -150,7 +163,7 @@
             <div class="blog-meta">Restoration • Mar 12, 2026</div>
             <h2 class="blog-title">The Art of French Polishing</h2>
             <p class="blog-excerpt">Discover why we prefer traditional French polishing techniques over modern varnishes when restoring Victorian mahogany and walnut pieces.</p>
-            <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read Article</a>
+            <a href="#" class="btn btn-outline">Read Article</a>
           </div>
         </article>
 
@@ -163,7 +176,7 @@
             <div class="blog-meta">History • Feb 28, 2026</div>
             <h2 class="blog-title">Origins of the Chesterfield</h2>
             <p class="blog-excerpt">Tracing the lineage of the iconic tufted leather sofa back to the 4th Earl of Chesterfield and its impact on gentleman's clubs.</p>
-            <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read Article</a>
+            <a href="#" class="btn btn-outline">Read Article</a>
           </div>
         </article>
 
@@ -176,7 +189,7 @@
             <div class="blog-meta">Buying Guide • Feb 15, 2026</div>
             <h2 class="blog-title">Identifying Original Mercury Glass</h2>
             <p class="blog-excerpt">Learn how to spot authentic 19th-century mirror plates and why the crystalline texture is so highly sought after by collectors.</p>
-            <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read Article</a>
+            <a href="#" class="btn btn-outline">Read Article</a>
           </div>
         </article>
 
@@ -189,7 +202,7 @@
             <div class="blog-meta">Styling • Jan 30, 2026</div>
             <h2 class="blog-title">Styling Salvaged Hardware</h2>
             <p class="blog-excerpt">How to incorporate reclaimed brass pulls and escutcheons into a modern minimalist kitchen design without it looking out of place.</p>
-            <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read Article</a>
+            <a href="#" class="btn btn-outline">Read Article</a>
           </div>
         </article>
 
@@ -202,7 +215,7 @@
             <div class="blog-meta">Restoration • Jan 15, 2026</div>
             <h2 class="blog-title">Victorian Stained Glass</h2>
             <p class="blog-excerpt">Exploring the delicate process of repairing leaded lights and sourcing period-correct colored glass from the 19th century.</p>
-            <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read Article</a>
+            <a href="#" class="btn btn-outline">Read Article</a>
           </div>
         </article>
 
@@ -215,7 +228,7 @@
             <div class="blog-meta">Buying Guide • Jan 05, 2026</div>
             <h2 class="blog-title">Sourcing Rare Mantelpieces</h2>
             <p class="blog-excerpt">Our guide to finding the perfect marble or oak fireplace surround and ensuring a seamless fit for your period home restoration.</p>
-            <a href="#" class="btn btn-outline" style="align-self: flex-start;">Read Article</a>
+            <a href="#" class="btn btn-outline">Read Article</a>
           </div>
         </article>
       </div>
@@ -227,7 +240,6 @@
   <section class="newsletter-section section-padding" style="background-color: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
     <div class="container text-center">
       <div style="max-width: 600px; margin: 0 auto;">
-        <span class="product-meta">Stay Informed</span>
         <h2 class="vintage-title" style="margin-bottom: var(--space-4);">The Heritage Archive</h2>
         <p style="color: var(--color-text-muted); margin-bottom: var(--space-8);">
           Receive monthly historical insights, restoration tutorials, and early notifications on rare acquisitions directly in your inbox.
@@ -249,7 +261,7 @@
         <p style="margin-bottom: var(--space-8); opacity: 0.8; line-height: 1.8;">
           We are currently building a digital archive of how our salvaged pieces have been integrated into modern homes. If you have a Heritage Salvage piece in your project, we invite you to share its second chapter with our community.
         </p>
-        <a href="contact.html" class="btn btn-outline" style="border-color: #fff; color: #fff;">Submit Your Story</a>
+        <a href="contact.html" class="btn btn-outline">Submit Your Story</a>
       </div>
     </div>
   </section>
