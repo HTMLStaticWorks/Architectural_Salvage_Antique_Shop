@@ -4,38 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Architectural Salvage & Antique Shop - Gallery</title>
-  <meta name="description" content="View our portfolio of restored architectural pieces and antique furniture in their new homes.">
+  <meta name="description" content="A curated portfolio of reclaimed elements in modern architectural projects.">
   
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <style>
-    /* Masonry-style Grid for Gallery */
+    /* Masonry Gallery Layout Style for Portfolio */
     .masonry-grid {
-      column-count: 1;
-      column-gap: var(--space-4);
-    }
-    @media (min-width: 640px) {
-      .masonry-grid { column-count: 2; }
-    }
-    @media (min-width: 1024px) {
-      .masonry-grid { column-count: 3; }
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      grid-gap: var(--space-4);
+      grid-auto-flow: dense;
     }
     .masonry-item {
-      break-inside: avoid;
-      margin-bottom: var(--space-4);
       position: relative;
       overflow: hidden;
       border-radius: 8px;
     }
     .masonry-item img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
       transition: transform var(--transition-slow);
     }
@@ -44,9 +39,11 @@
     }
     .gallery-overlay {
       position: absolute;
-      bottom: 0; left: 0; right: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: var(--space-4);
       background: linear-gradient(transparent, rgba(0,0,0,0.8));
-      padding: var(--space-4) var(--space-3);
       color: #fff;
       opacity: 0;
       transition: opacity var(--transition-normal);
@@ -62,12 +59,12 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
-        <span class="logo-text">Heritage Salvage</span>
+        <img src="assets/images/favicon.svg" alt="Heritage Salvage" class="site-logo"><span class="logo-text">Heritage salvage</span>
+        
       </a>
       
-      <nav class="nav-menu">
-        <a href="index.html">Home</a>
+            <nav class="nav-menu">
+        <a href="index.html" class="">Home</a>
         <a href="home-2.html">Home 2</a>
         <a href="shop.html">Shop</a>
         <a href="categories.html">Categories</a>
@@ -75,33 +72,46 @@
         <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+
+        <div class="nav-mobile-only mobile-auth-tray">
+          <button id="rtlToggleMobile" class="rtl-text-btn" aria-label="Toggle RTL">RTL</button>
+          <div class="mobile-auth-buttons">
+            <a href="login.html" class="btn btn-login">Login</a>
+            <a href="register.html" class="btn btn-register">Register</a>
+          </div>
+        </div>
       </nav>
 
-      <div class="header-actions">
+            <div class="header-actions">
+        <div class="nav-auth nav-desktop-only">
+          <a href="login.html" class="btn btn-login">Login</a>
+          <a href="register.html" class="btn btn-register">Register</a>
+        </div>
         <!-- Tools Toggles -->
         <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-        <button id="rtlToggle" class="icon-btn" aria-label="Toggle RTL">
+        <button id="rtlToggle" class="icon-btn nav-desktop-only" aria-label="Toggle RTL">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 9V3h-6"></path><path d="M3 15v6h6"></path><path d="M21 3l-7.5 7.5"></path><path d="M3 21l7.5-7.5"></path>
           </svg>
         </button>
+
         <button class="hamburger-menu" aria-label="Open Mobile Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
-    </div>
+      </div>
   </header>
 
   <!-- SECTION 2: HERO SECTION -->
-  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop'); min-height: 40vh;">
-    <div class="hero-overlay"></div>
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1449247709967-d4461a6a6103?q=80&w=2071&auto=format&fit=crop'); min-height: 40vh;">
+    <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));"></div>
     <div class="container hero-content">
-      <h1 class="fade-in">Portfolio of Restorations</h1>
-      <p class="fade-in" style="animation-delay: 0.1s">See how our historical pieces breathe life into modern environments.</p>
+      <h1 class="fade-in" style="font-size: clamp(2rem, 5vw, 4rem)">The Portfolio of Time</h1>
+      <p class="fade-in" style="animation-delay: 0.1s">A showcase of reclaimed pieces living their second life in modern estates.</p>
     </div>
   </section>
 
@@ -112,36 +122,36 @@
       <div class="masonry-grid">
         <!-- Item 1 -->
         <div class="masonry-item">
-          <img src="assets/images/victorian_fireplace.png" alt="Restored Fireplace">
+          <img src="assets/images/Industrial Lighting Project.png" alt="Industrial Lighting Project">
           <div class="gallery-overlay">
-            <h3 style="color:#fff; font-size: 1.25rem;">Victorian Marble Surround</h3>
-            <p style="opacity:0.8; margin-bottom:0">Installed in a Kensington Townhouse</p>
+            <h3 style="color:#fff; font-size: 1.25rem;">The Foundry Sconces</h3>
+            <p style="opacity:0.8; margin-bottom:0">Berlin Loft Apartment</p>
           </div>
         </div>
 
         <!-- Item 2 -->
         <div class="masonry-item">
-          <img src="assets/images/Pendant Lighting Kitchen.avif" alt="Pendant Lighting Kitchen">
+          <img src="assets/images/Hardware Installation.png" alt="Hardware Installation">
           <div class="gallery-overlay">
-            <h3 style="color:#fff; font-size: 1.25rem;">Industrial Factory Pendants</h3>
-            <p style="opacity:0.8; margin-bottom:0">Soho Loft Renovation</p>
+            <h3 style="color:#fff; font-size: 1.25rem;">Bespoke Brass Fittings</h3>
+            <p style="opacity:0.8; margin-bottom:0">Period Restoration, Oxford</p>
           </div>
         </div>
 
         <!-- Item 3 -->
         <div class="masonry-item">
-          <img src="assets/images/Leather Chair Study.png" alt="Leather Chair Study">
+          <img src="assets/images/Decor Category.png" alt="Antique Decor Accents">
           <div class="gallery-overlay">
-            <h3 style="color:#fff; font-size: 1.25rem;">Chesterfield Library</h3>
-            <p style="opacity:0.8; margin-bottom:0">Private Estate, Surrey</p>
+            <h3 style="color:#fff; font-size: 1.25rem;">Victorian Focal Points</h3>
+            <p style="opacity:0.8; margin-bottom:0">Curated Penthouse Suite</p>
           </div>
         </div>
 
         <!-- Item 4 -->
         <div class="masonry-item">
-          <img src="assets/images/Rustic Table Dining.png" alt="Rustic Table Dining">
+          <img src="https://images.unsplash.com/photo-1544457070-4cd773b4d71e?q=80&w=1000&auto=format&fit=crop" alt="Antique Mirror Installation">
           <div class="gallery-overlay">
-            <h3 style="color:#fff; font-size: 1.25rem;">Monastery Dining Table</h3>
+            <h3 style="color:#fff; font-size: 1.25rem;">Giltwood Overmantel</h3>
             <p style="opacity:0.8; margin-bottom:0">Cotswolds Country Retreat</p>
           </div>
         </div>
@@ -165,17 +175,61 @@
         </div>
       </div>
 
-      <!-- No Pagination (Continuous Gallery Mandate) -->
-
     </div>
   </main>
+
+  <!-- NEW SECTION: PROJECT SPOTLIGHT -->
+  <section class="project-spotlight section-padding" style="background-color: var(--color-surface-hover); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="grid-2 align-items-center">
+        <div class="spotlight-img" style="border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-md);">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" alt="Cotswold Barn Project" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+        <div class="spotlight-content" style="padding-left: var(--space-8);">
+          <span class="product-meta">Case Study</span>
+          <h2 class="vintage-title" style="text-align: left; font-size: 2.5rem; margin-bottom: var(--space-4);">The Cotswold Barn Conversion</h2>
+          <p style="font-size: 1.125rem; color: var(--color-text-muted); margin-bottom: var(--space-4); line-height: 1.7;">
+            When an 18th-century barn in Gloucestershire was slated for conversion, the owners turned to Heritage Salvage to help anchor the modern interior with historical weight.
+          </p>
+          <p style="font-size: 1.125rem; color: var(--color-text-muted); margin-bottom: var(--space-6); line-height: 1.7;">
+            We provided 400 linear feet of reclaimed French Oak beams and a suite of industrial factory pendants. The result is a seamless transition between agrarian history and minimalist luxury.
+          </p>
+          <a href="contact.html" class="btn btn-outline">Enquire about a Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style Synthesis Section -->
+  <section class="style-synthesis section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="vintage-title">Style Synthesis</h2>
+        <p>Expert advice on integrating historical weight into modern aesthetics.</p>
+      </div>
+      <div class="grid-2" style="gap: var(--space-8); text-align: left;">
+        <div>
+          <h3 style="font-family: var(--font-heading); margin-bottom: var(--space-2);">Mixing Eras</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem;">Don't be afraid to pair a 1920s Art Deco mirror with a mid-century modern vanity. The key is to find a common thread—be it the warmth of the metal or the geometry of the lines.</p>
+        </div>
+        <div>
+          <h3 style="font-family: var(--font-heading); margin-bottom: var(--space-2);">Material Balance</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem;">If your space is dominated by glass and steel, anchor it with the organic texture of reclaimed wood or the earthy patina of weathered brass to prevent the room from feeling clinical.</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: var(--space-8);">
+        <a href="blog.html" class="btn btn-outline">Read our Design Stories</a>
+      </div>
+    </div>
+  </section>
 
   <!-- SECTION 4: SUPPORTING SECTION & FOOTER -->
   <section class="supporting-section">
     <!-- Value Add / Statistics Block -->
     <div class="section-padding">
       <div class="container">
-        <div class="grid-3" style="text-align: center;">
+        <!-- Added custom class 'stats-grid' for precise centering -->
+        <div class="grid-3 stats-grid" style="text-align: center;">
           <div>
             <div style="font-family: var(--font-heading); font-size: 3rem; color: var(--color-primary); font-weight: 700;">2,500+</div>
             <p style="color: var(--color-text-muted);">Pieces Restored</p>
@@ -197,11 +251,22 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <div class="footer-logo-wrap">
-              <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
-              <h4 class="logo-text" style="color: var(--color-accent);">Heritage Salvage</h4>
-            </div>
+            <a href="index.html" class="footer-logo-wrap">
+              <img src="assets/images/favicon.svg" alt="Heritage Salvage" class="site-logo"><span class="logo-text">Heritage salvage</span>
+              
+            </a>
             <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Pinterest">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.27 2.71 7.89 6.51 9.27-.08-.8-.15-2.02.03-2.9.17-.78 1.1-4.64 1.1-4.64s-.28-.56-.28-1.39c0-1.3.75-2.27 1.7-2.27.8 0 1.19.6 1.19 1.32 0 .8-.51 2-.77 3.11-.22.93.47 1.68 1.38 1.68 1.66 0 2.93-1.75 2.93-4.27 0-2.23-1.6-3.79-3.89-3.79-2.65 0-4.21 1.99-4.21 4.04 0 .8.31 1.66.69 2.13.08.09.09.17.06.27-.07.29-.22.88-.25.99-.04.16-.13.2-.3.12-1.12-.52-1.82-2.16-1.82-3.48 0-2.83 2.06-5.44 5.94-5.44 3.12 0 5.54 2.22 5.54 5.19 0 3.1-1.95 5.6-4.66 5.6-.91 0-1.76-.47-2.06-1.02 0 0-.45 1.71-.56 2.13-.2.78-.75 1.75-1.12 2.35 1.05.31 2.16.48 3.32.48 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+              </a>
+            </div>
           </div>
           <div class="footer-col">
             <h4>Explore</h4>

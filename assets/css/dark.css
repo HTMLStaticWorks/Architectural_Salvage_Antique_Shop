@@ -46,7 +46,7 @@ html.dark .btn-primary:hover {
 }
 
 /* Image filters to lower brightness slightly in dark mode to reduce eye strain */
-html.dark img:not(.logo-img) {
+html.dark img:not(.site-logo) {
   filter: brightness(0.9) contrast(1.1);
 }
 

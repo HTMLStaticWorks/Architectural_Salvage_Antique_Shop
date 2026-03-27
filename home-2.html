@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,19 +26,42 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      text-align: center;
       background-color: var(--color-bg);
+    }
+    .hero-btns {
+      display: flex;
+      gap: var(--space-2);
+      margin-top: var(--space-4);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 640px) {
+      .hero-btns {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 300px;
+        margin-inline: auto;
+      }
     }
     .hero-split-img {
       min-height: 40vh;
       background-size: cover;
       background-position: center;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 1200px) {
       .hero-split {
         grid-template-columns: 1fr 1fr;
       }
       .hero-split-text {
         padding: var(--space-12) var(--space-8);
+        align-items: flex-start;
+        text-align: left;
+      }
+      .hero-btns {
+        justify-content: flex-start;
       }
       .hero-split-img {
         min-height: auto;
@@ -55,12 +78,12 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
-        <span class="logo-text">Heritage Salvage</span>
+        <img src="assets/images/favicon.svg" alt="Heritage Salvage" class="site-logo"><span class="logo-text">Heritage salvage</span>
+        
       </a>
       
-      <nav class="nav-menu">
-        <a href="index.html">Home</a>
+            <nav class="nav-menu">
+        <a href="index.html" class="">Home</a>
         <a href="home-2.html" class="active">Home 2</a>
         <a href="shop.html">Shop</a>
         <a href="categories.html">Categories</a>
@@ -68,16 +91,28 @@
         <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+
+        <div class="nav-mobile-only mobile-auth-tray">
+          <button id="rtlToggleMobile" class="rtl-text-btn" aria-label="Toggle RTL">RTL</button>
+          <div class="mobile-auth-buttons">
+            <a href="login.html" class="btn btn-login">Login</a>
+            <a href="register.html" class="btn btn-register">Register</a>
+          </div>
+        </div>
       </nav>
 
-      <div class="header-actions">
+            <div class="header-actions">
+        <div class="nav-auth nav-desktop-only">
+          <a href="login.html" class="btn btn-login">Login</a>
+          <a href="register.html" class="btn btn-register">Register</a>
+        </div>
         <!-- Tools Toggles -->
         <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-        <button id="rtlToggle" class="icon-btn" aria-label="Toggle RTL">
+        <button id="rtlToggle" class="icon-btn nav-desktop-only" aria-label="Toggle RTL">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 9V3h-6"></path><path d="M3 15v6h6"></path><path d="M21 3l-7.5 7.5"></path><path d="M3 21l7.5-7.5"></path>
           </svg>
@@ -87,7 +122,7 @@
           <span></span><span></span><span></span>
         </button>
       </div>
-    </div>
+      </div>
   </header>
 
   <!-- SECTION 2: HERO SECTION (Split layout) -->
@@ -95,7 +130,7 @@
     <div class="hero-split-text">
       <h1 class="fade-in" style="font-size: clamp(2rem, 4vw, 3.5rem)">Redefining Authentic Charm</h1>
       <p class="fade-in" style="animation-delay: 0.1s; color: var(--color-text-muted); font-size: 1.1rem">We traverse the globe sourcing the finest salvaged materials and antiques. Bring a piece of heritage into your contemporary lifestyle.</p>
-      <div style="display: flex; gap: var(--space-2); margin-top: var(--space-4);" class="fade-in" style="animation-delay: 0.2s">
+      <div class="hero-btns fade-in" style="animation-delay: 0.2s">
         <a href="shop.html" class="btn btn-primary">Shop Latest Arrivals</a>
         <a href="about.html" class="btn btn-outline">Read Our Story</a>
       </div>
@@ -168,6 +203,33 @@
     </div>
   </main>
 
+  <!-- Historic Materials Section -->
+  <section class="materials-section section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="vintage-title">The Essence of Heritage</h2>
+        <p>We celebrate the raw beauty of reclaimed materials that have stood the test of time.</p>
+      </div>
+      <div class="grid-3">
+        <div class="material-item fade-in">
+          <div class="material-icon">🌳</div>
+          <h3 class="card-title">Old Growth Oak</h3>
+          <p class="card-desc">Dense, slow-grown timber salvaged from 18th-century barns and estates.</p>
+        </div>
+        <div class="material-item fade-in" style="animation-delay: 0.1s">
+          <div class="material-icon">🔨</div>
+          <h3 class="card-title">Historic Iron</h3>
+          <p class="card-desc">Hand-forged wrought iron with unique hammer marks and authentic structural integrity.</p>
+        </div>
+        <div class="material-item fade-in" style="animation-delay: 0.2s">
+          <div class="material-icon">⚖️</div>
+          <h3 class="card-title">Weathered Brass</h3>
+          <p class="card-desc">Solid brass elements with natural patina that only decades of exposure can create.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SECTION 4: SUPPORTING SECTION & FOOTER -->
   <section class="supporting-section">
     <!-- Value Add / Testimonial Block -->
@@ -179,21 +241,21 @@
         </div>
         <div class="grid-3">
           <!-- Testimonial -->
-          <div class="card" style="padding: var(--space-4); text-align: center;">
-            <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: var(--space-2);">★★★★★</div>
-            <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-3);">"The quality of the restorations is incredible. My Louis XIV commode is easily the centerpiece of my living room."</p>
+          <div class="card" style="padding: var(--space-4); text-align: center; display: flex; flex-direction: column;">
+            <div style="color: #f1c40f; font-size: 1.5rem; margin-bottom: var(--space-2);">★★★★★</div>
+            <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-3); flex: 1;">"The quality of the restorations is incredible. My Louis XIV commode is easily the centerpiece of my living room."</p>
             <h4 style="font-family: var(--font-body); font-size: 1rem;">- Eleanor R.</h4>
           </div>
           <!-- Testimonial -->
-          <div class="card" style="padding: var(--space-4); text-align: center;">
-            <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: var(--space-2);">★★★★★</div>
-            <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-3);">"Found the exact Victorian hardware I needed for my home renovation project. Flawless service and delivery."</p>
+          <div class="card" style="padding: var(--space-4); text-align: center; display: flex; flex-direction: column;">
+            <div style="color: #f1c40f; font-size: 1.5rem; margin-bottom: var(--space-2);">★★★★★</div>
+            <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-3); flex: 1;">"Found the exact Victorian hardware I needed for my home renovation project. Flawless service and delivery."</p>
             <h4 style="font-family: var(--font-body); font-size: 1rem;">- Thomas C.</h4>
           </div>
           <!-- Testimonial -->
-          <div class="card" style="padding: var(--space-4); text-align: center;">
-            <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: var(--space-2);">★★★★★</div>
-            <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-3);">"A hidden gem! Their lighting selection is unmatched. I’m deeply impressed by their transparency on origins."</p>
+          <div class="card" style="padding: var(--space-4); text-align: center; display: flex; flex-direction: column;">
+            <div style="color: #f1c40f; font-size: 1.5rem; margin-bottom: var(--space-2);">★★★★★</div>
+            <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-3); flex: 1;">"A hidden gem! Their lighting selection is unmatched. I’m deeply impressed by their transparency on origins."</p>
             <h4 style="font-family: var(--font-body); font-size: 1rem;">- Amelia S.</h4>
           </div>
         </div>
@@ -201,15 +263,73 @@
     </div>
     
     <!-- Footer directly inside the Supporting Section block -->
+    <!-- NEW SECTION: CURATING FOR THE MODERN HOME -->
+    <section class="curating-modern section-padding" style="border-top: 1px solid var(--color-border); background-color: var(--color-surface);">
+      <div class="container">
+        <div class="grid-2 align-items-center">
+          <div class="journey-img" style="border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-md); order: 2;">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop" alt="Modern Interior with Salvage" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          </div>
+          <div class="journey-content" style="order: 1; padding-right: var(--space-8);">
+            <span class="product-meta">Interior Inspiration</span>
+            <h2 class="vintage-title" style="text-align: left; font-size: 3rem;">Curating the Modern Home</h2>
+            <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-text-muted); margin-bottom: var(--space-4);">
+              Integrating architectural salvage into a contemporary residence creates a unique dialogue between the past and the present. Our collection is curated specifically for designers who seek the "soul" of an object to anchor a modern space.
+            </p>
+            <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-text-muted);">
+              Whether it's a structural beam repurposed as a mantel or a set of industrial pendants over a minimalist kitchen island, these pieces provide the texture and history that modern manufacturing simply cannot replicate.
+            </p>
+            <a href="gallery.html" class="btn btn-outline" style="margin-top: var(--space-4);">View Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Designers' Circle Section -->
+    <section class="designers-circle section-padding">
+      <div class="container">
+        <div class="designers-content">
+          <h2 class="vintage-title">The Designers' Circle</h2>
+          <p style="font-size: 1.25rem; color: var(--color-text-muted);">Partnering with visionaries to create spaces that breathe history and character.</p>
+          <div class="designers-grid">
+            <div class="designer-feature">
+              <h4>Bespoke Sourcing</h4>
+              <p style="font-size: 0.9rem;">Access to our private acquisitions network for rare, project-specific requirements.</p>
+            </div>
+            <div class="designer-feature">
+              <h4>Custom Scaling</h4>
+              <p style="font-size: 0.9rem;">In-house workshops capable of resizing reclaimed components to modern blueprints.</p>
+            </div>
+            <div class="designer-feature">
+              <h4>Provenance Docs</h4>
+              <p style="font-size: 0.9rem;">Comprehensive historical background for every piece to enrich your design narrative.</p>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-outline" style="margin-top: var(--space-8);">Join the Professional Network</a>
+        </div>
+      </div>
+    </section>
+    
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <div class="footer-logo-wrap">
-              <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
-              <h4 class="logo-text" style="color: var(--color-accent);">Heritage Salvage</h4>
-            </div>
+            <a href="index.html" class="footer-logo-wrap">
+              <img src="assets/images/favicon.svg" alt="Heritage Salvage" class="site-logo"><span class="logo-text">Heritage salvage</span>
+              
+            </a>
             <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Pinterest">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.27 2.71 7.89 6.51 9.27-.08-.8-.15-2.02.03-2.9.17-.78 1.1-4.64 1.1-4.64s-.28-.56-.28-1.39c0-1.3.75-2.27 1.7-2.27.8 0 1.19.6 1.19 1.32 0 .8-.51 2-.77 3.11-.22.93.47 1.68 1.38 1.68 1.66 0 2.93-1.75 2.93-4.27 0-2.23-1.6-3.79-3.89-3.79-2.65 0-4.21 1.99-4.21 4.04 0 .8.31 1.66.69 2.13.08.09.09.17.06.27-.07.29-.22.88-.25.99-.04.16-.13.2-.3.12-1.12-.52-1.82-2.16-1.82-3.48 0-2.83 2.06-5.44 5.94-5.44 3.12 0 5.54 2.22 5.54 5.19 0 3.1-1.95 5.6-4.66 5.6-.91 0-1.76-.47-2.06-1.02 0 0-.45 1.71-.56 2.13-.2.78-.75 1.75-1.12 2.35 1.05.31 2.16.48 3.32.48 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+              </a>
+            </div>
           </div>
           <div class="footer-col">
             <h4>Explore</h4>

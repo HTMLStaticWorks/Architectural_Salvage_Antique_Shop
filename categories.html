@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,12 +20,12 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
-        <span class="logo-text">Heritage Salvage</span>
+        <img src="assets/images/favicon.svg" alt="Heritage Salvage" class="site-logo"><span class="logo-text">Heritage salvage</span>
+        
       </a>
       
-      <nav class="nav-menu">
-        <a href="index.html">Home</a>
+            <nav class="nav-menu">
+        <a href="index.html" class="">Home</a>
         <a href="home-2.html">Home 2</a>
         <a href="shop.html">Shop</a>
         <a href="categories.html" class="active">Categories</a>
@@ -33,16 +33,28 @@
         <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+
+        <div class="nav-mobile-only mobile-auth-tray">
+          <button id="rtlToggleMobile" class="rtl-text-btn" aria-label="Toggle RTL">RTL</button>
+          <div class="mobile-auth-buttons">
+            <a href="login.html" class="btn btn-login">Login</a>
+            <a href="register.html" class="btn btn-register">Register</a>
+          </div>
+        </div>
       </nav>
 
-      <div class="header-actions">
+            <div class="header-actions">
+        <div class="nav-auth nav-desktop-only">
+          <a href="login.html" class="btn btn-login">Login</a>
+          <a href="register.html" class="btn btn-register">Register</a>
+        </div>
         <!-- Tools Toggles -->
         <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-        <button id="rtlToggle" class="icon-btn" aria-label="Toggle RTL">
+        <button id="rtlToggle" class="icon-btn nav-desktop-only" aria-label="Toggle RTL">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 9V3h-6"></path><path d="M3 15v6h6"></path><path d="M21 3l-7.5 7.5"></path><path d="M3 21l7.5-7.5"></path>
           </svg>
@@ -52,7 +64,7 @@
           <span></span><span></span><span></span>
         </button>
       </div>
-    </div>
+      </div>
   </header>
 
   <!-- SECTION 2: HERO SECTION -->
@@ -90,7 +102,7 @@
           <div class="card-icon" style="font-size: 3rem; margin-bottom: var(--space-3)">🚪</div>
           <h3 class="card-title">Architectural Doors</h3>
           <p class="card-desc">Reclaimed entryways, stained glass, and panel doors.</p>
-          <a href="shop.html" class="btn btn-outline">Explore Doors</a>
+          <a href="shop.html?filter=furniture" class="btn btn-outline">Explore Doors</a>
         </div>
 
         <!-- Category Card 4 -->
@@ -98,15 +110,15 @@
           <div class="card-icon" style="font-size: 3rem; margin-bottom: var(--space-3)">💡</div>
           <h3 class="card-title">Antique Lighting</h3>
           <p class="card-desc">Chandeliers, sconces, and industrial pendants.</p>
-          <a href="shop.html" class="btn btn-outline">Explore Lighting</a>
+          <a href="shop.html?filter=lighting" class="btn btn-outline">Explore Lighting</a>
         </div>
 
         <!-- Category Card 5 -->
         <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--space-6) var(--space-4);">
-          <div class="card-icon" style="font-size: 3rem; margin-bottom: var(--space-3)">🪑</div>
+          <div class="card-icon" style="font-size: 3rem; margin-bottom: var(--space-3)">🛋️</div>
           <h3 class="card-title">Seating</h3>
           <p class="card-desc">Restored armchairs, settees, and dining chairs.</p>
-          <a href="shop.html" class="btn btn-outline">Explore Seating</a>
+          <a href="shop.html?filter=furniture" class="btn btn-outline">Explore Seating</a>
         </div>
 
         <!-- Category Card 6 -->
@@ -114,12 +126,54 @@
           <div class="card-icon" style="font-size: 3rem; margin-bottom: var(--space-3)">🔑</div>
           <h3 class="card-title">Hardware</h3>
           <p class="card-desc">Original brass pulls, cast iron brackets, and escutcheons.</p>
-          <a href="shop.html" class="btn btn-outline">Explore Hardware</a>
+          <a href="shop.html?filter=hardware" class="btn btn-outline">Explore Hardware</a>
         </div>
       </div>
 
     </div>
   </main>
+
+  <!-- Preservation Pledge Section -->
+  <section class="preservation-pledge section-padding">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h2 class="vintage-title">The Preservation Pledge</h2>
+        <p style="font-size: 1.2rem; color: var(--color-text-muted); line-height: 1.8;">
+          Every object in our collection represents a fragment of history rescued from the verge of loss. We pledge to honor the original craftsmanship by using only reversible conservation methods and providing full transparency on the provenance of every element we source.
+        </p>
+        <div class="grid-3" style="margin-top: var(--space-8); border-top: 1px solid var(--color-border); padding-top: var(--space-6);">
+          <div>
+            <h4 style="color: var(--color-primary);">Rescue</h4>
+            <p style="font-size: 0.9rem;">Preventing historical materials from entering the waste stream.</p>
+          </div>
+          <div>
+            <h4 style="color: var(--color-primary);">Restore</h4>
+            <p style="font-size: 0.9rem;">Using traditional artisan techniques to revive structural integrity.</p>
+          </div>
+          <div>
+            <h4 style="color: var(--color-primary);">Respect</h4>
+            <p style="font-size: 0.9rem;">Maintaining the authentic patina and character of the eras past.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: CUSTOM SOURCING -->
+  <section class="custom-sourcing section-padding" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1974&auto=format&fit=crop'); background-size: cover; background-position: center; color: #fff; text-align: center;">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h2 class="vintage-title" style="color: #fff; margin-bottom: var(--space-4);">Can't Find a Specific Piece?</h2>
+        <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: var(--space-6);">
+          Our acquisitions team travels weekly across Europe and the UK. If you are looking for a specific era, material, or architectural element, we can source it for you through our private network of estate demolitions.
+        </p>
+        <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-primary" style="padding-inline: var(--space-8);">Request a Custom Search</a>
+          <a href="about.html" class="btn btn-outline" style="border-color: #fff; color: #fff;">Learn How We Source</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- SECTION 4: SUPPORTING SECTION & FOOTER -->
   <section class="supporting-section">
@@ -137,11 +191,22 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <div class="footer-logo-wrap">
-              <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
-              <h4 class="logo-text" style="color: var(--color-accent);">Heritage Salvage</h4>
-            </div>
+            <a href="index.html" class="footer-logo-wrap">
+              <img src="assets/images/favicon.svg" alt="Heritage Salvage" class="site-logo"><span class="logo-text">Heritage salvage</span>
+              
+            </a>
             <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Pinterest">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.27 2.71 7.89 6.51 9.27-.08-.8-.15-2.02.03-2.9.17-.78 1.1-4.64 1.1-4.64s-.28-.56-.28-1.39c0-1.3.75-2.27 1.7-2.27.8 0 1.19.6 1.19 1.32 0 .8-.51 2-.77 3.11-.22.93.47 1.68 1.38 1.68 1.66 0 2.93-1.75 2.93-4.27 0-2.23-1.6-3.79-3.89-3.79-2.65 0-4.21 1.99-4.21 4.04 0 .8.31 1.66.69 2.13.08.09.09.17.06.27-.07.29-.22.88-.25.99-.04.16-.13.2-.3.12-1.12-.52-1.82-2.16-1.82-3.48 0-2.83 2.06-5.44 5.94-5.44 3.12 0 5.54 2.22 5.54 5.19 0 3.1-1.95 5.6-4.66 5.6-.91 0-1.76-.47-2.06-1.02 0 0-.45 1.71-.56 2.13-.2.78-.75 1.75-1.12 2.35 1.05.31 2.16.48 3.32.48 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+              </a>
+            </div>
           </div>
           <div class="footer-col">
             <h4>Explore</h4>

@@ -3,73 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Architectural Salvage & Antique Shop - Blog & Stories</title>
-  <meta name="description" content="Read our stories about restoring antique furniture, history of salvage pieces, and styling tips.">
+  <title>Architectural Salvage & Antique Shop - Blog</title>
+  <meta name="description" content="Read stories of restoration, historical insights, and architectural salvage guides.">
   
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <style>
+    /* Specific Blog Styles */
     .blog-card {
       display: flex;
       flex-direction: column;
-      height: 100%;
       background: var(--color-surface);
       border: 1px solid var(--color-border);
       border-radius: 8px;
       overflow: hidden;
-      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+      transition: transform var(--transition-normal);
     }
     .blog-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--color-primary);
+      transform: translateY(-5px);
     }
     .blog-img {
-      position: relative;
-      padding-bottom: 60%;
+      height: 240px;
       overflow: hidden;
     }
     .blog-img img {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      transition: transform var(--transition-slow);
-    }
-    .blog-card:hover .blog-img img {
-      transform: scale(1.05);
     }
     .blog-content {
       padding: var(--space-4);
-      flex: 1;
       display: flex;
       flex-direction: column;
+      gap: var(--space-2);
     }
     .blog-meta {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--color-primary);
-      text-transform: uppercase;
-      letter-spacing: 1px;
       font-weight: 600;
-      margin-bottom: var(--space-2);
+      text-transform: uppercase;
     }
     .blog-title {
       font-size: 1.5rem;
-      margin-bottom: var(--space-2);
-      transition: color var(--transition-fast);
-    }
-    .blog-card:hover .blog-title {
-      color: var(--color-primary);
+      margin-bottom: 0;
     }
     .blog-excerpt {
+      font-size: 0.95rem;
       color: var(--color-text-muted);
-      margin-bottom: var(--space-4);
-      flex: 1;
+      line-height: 1.6;
+    }
+    .author-card {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      padding: var(--space-6);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+    }
+    .author-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -79,11 +80,11 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
-        <span class="logo-text">Heritage Salvage</span>
+        <img src="assets/images/favicon.svg" alt="Heritage Salvage" class="site-logo"><span class="logo-text">Heritage salvage</span>
+        
       </a>
       
-      <nav class="nav-menu">
+            <nav class="nav-menu">
         <a href="index.html">Home</a>
         <a href="home-2.html">Home 2</a>
         <a href="shop.html">Shop</a>
@@ -92,33 +93,46 @@
         <a href="blog.html" class="active">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+
+        <div class="nav-mobile-only mobile-auth-tray">
+          <button id="rtlToggleMobile" class="rtl-text-btn" aria-label="Toggle RTL">RTL</button>
+          <div class="mobile-auth-buttons">
+            <a href="login.html" class="btn btn-login">Login</a>
+            <a href="register.html" class="btn btn-register">Register</a>
+          </div>
+        </div>
       </nav>
 
-      <div class="header-actions">
+            <div class="header-actions">
+        <div class="nav-auth nav-desktop-only">
+          <a href="login.html" class="btn btn-login">Login</a>
+          <a href="register.html" class="btn btn-register">Register</a>
+        </div>
         <!-- Tools Toggles -->
         <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-        <button id="rtlToggle" class="icon-btn" aria-label="Toggle RTL">
+        <button id="rtlToggle" class="icon-btn nav-desktop-only" aria-label="Toggle RTL">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 9V3h-6"></path><path d="M3 15v6h6"></path><path d="M21 3l-7.5 7.5"></path><path d="M3 21l7.5-7.5"></path>
           </svg>
         </button>
+
         <button class="hamburger-menu" aria-label="Open Mobile Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
-    </div>
+      </div>
   </header>
 
   <!-- SECTION 2: HERO SECTION -->
-  <section class="hero-section" style="background-image: url('assets/images/hero-blog.png'); min-height: 40vh;">
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1974&auto=format&fit=crop'); min-height: 40vh;">
     <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));"></div>
     <div class="container hero-content">
-      <h1 class="fade-in" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">Antique Stories & Tips</h1>
-      <p class="fade-in" style="animation-delay: 0.1s; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Insights from the world of architectural salvage and conservation.</p>
+      <h1 class="fade-in">The Heritage Archive</h1>
+      <p class="fade-in" style="animation-delay: 0.1s">Deep dives into the history, craftsmanship, and soul of salvaged architectural elements.</p>
     </div>
   </section>
 
@@ -206,19 +220,48 @@
         </article>
       </div>
 
-      <!-- No Pagination (Continuous Gallery Mandate) -->
-
     </div>
   </main>
+
+  <!-- NEWSLETTER SIGNUP -->
+  <section class="newsletter-section section-padding" style="background-color: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+    <div class="container text-center">
+      <div style="max-width: 600px; margin: 0 auto;">
+        <span class="product-meta">Stay Informed</span>
+        <h2 class="vintage-title" style="margin-bottom: var(--space-4);">The Heritage Archive</h2>
+        <p style="color: var(--color-text-muted); margin-bottom: var(--space-8);">
+          Receive monthly historical insights, restoration tutorials, and early notifications on rare acquisitions directly in your inbox.
+        </p>
+        <form style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+          <input type="email" placeholder="Your email address" style="padding: var(--space-3) var(--space-4); border: 1px solid var(--color-border); border-radius: 4px; background: var(--color-surface-hover); color: var(--color-text); width: 100%; max-width: 300px;" required>
+          <button type="submit" class="btn btn-primary">Join the Archive</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collector's Narrative Section -->
+  <section class="collector-narrative section-padding">
+    <div class="container">
+      <div style="max-width: 700px; margin: 0 auto;">
+        <h2 class="vintage-title">The Collector's Narrative</h2>
+        <p style="font-size: 1.25rem; font-style: italic; opacity: 0.9; margin-bottom: var(--space-6);">"Every home has a story. Our mission is to provide the artifacts that tell it."</p>
+        <p style="margin-bottom: var(--space-8); opacity: 0.8; line-height: 1.8;">
+          We are currently building a digital archive of how our salvaged pieces have been integrated into modern homes. If you have a Heritage Salvage piece in your project, we invite you to share its second chapter with our community.
+        </p>
+        <a href="contact.html" class="btn btn-outline" style="border-color: #fff; color: #fff;">Submit Your Story</a>
+      </div>
+    </div>
+  </section>
 
   <!-- SECTION 4: SUPPORTING SECTION & FOOTER -->
   <section class="supporting-section">
     <!-- Value Add / Featured Author Block -->
     <div class="section-padding">
       <div class="container">
-        <div class="card" style="display: flex; flex-direction: row; align-items: center; padding: var(--space-6); max-width: 800px; margin: 0 auto; gap: var(--space-4);">
-          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800&auto=format&fit=crop" alt="Author" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
-          <div style="text-align: left;">
+        <div class="card author-card">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800&auto=format&fit=crop" alt="Author" class="author-avatar">
+          <div>
             <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 4px; text-transform: uppercase; font-size: 0.85rem;">Featured Contributor</p>
             <h3 style="font-size: 1.5rem; margin-bottom: var(--space-2);">Sarah Jenkins</h3>
             <p style="color: var(--color-text-muted); margin-bottom: 0;">Sarah is our Lead Historical Researcher with an MA in Architectural History. She travels across Europe to document the provenance of our finest salvaged pieces before they enter our workshops.</p>
@@ -232,11 +275,22 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <div class="footer-logo-wrap">
-              <img src="assets/images/logo.png" alt="Heritage Salvage" class="site-logo">
-              <h4 class="logo-text" style="color: var(--color-accent);">Heritage Salvage</h4>
-            </div>
+            <a href="index.html" class="footer-logo-wrap">
+              <img src="assets/images/favicon.svg" alt="Heritage Salvage" class="site-logo"><span class="logo-text">Heritage salvage</span>
+              
+            </a>
             <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Curators of history. Discovering unique architectural salvage and antique pieces for the modern visionary.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Pinterest">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.27 2.71 7.89 6.51 9.27-.08-.8-.15-2.02.03-2.9.17-.78 1.1-4.64 1.1-4.64s-.28-.56-.28-1.39c0-1.3.75-2.27 1.7-2.27.8 0 1.19.6 1.19 1.32 0 .8-.51 2-.77 3.11-.22.93.47 1.68 1.38 1.68 1.66 0 2.93-1.75 2.93-4.27 0-2.23-1.6-3.79-3.89-3.79-2.65 0-4.21 1.99-4.21 4.04 0 .8.31 1.66.69 2.13.08.09.09.17.06.27-.07.29-.22.88-.25.99-.04.16-.13.2-.3.12-1.12-.52-1.82-2.16-1.82-3.48 0-2.83 2.06-5.44 5.94-5.44 3.12 0 5.54 2.22 5.54 5.19 0 3.1-1.95 5.6-4.66 5.6-.91 0-1.76-.47-2.06-1.02 0 0-.45 1.71-.56 2.13-.2.78-.75 1.75-1.12 2.35 1.05.31 2.16.48 3.32.48 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+              </a>
+            </div>
           </div>
           <div class="footer-col">
             <h4>Explore</h4>
