@@ -431,6 +431,16 @@ button {
   text-align: center;
 }
 
+.hero-section.hero-large {
+  min-height: calc(100vh - var(--header-height)); /* Full page perfect fit */
+}
+
+/* Enhanced Overlay specifically for large hero */
+.hero-section.hero-large .hero-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.8) 100%);
+  backdrop-filter: blur(2px);
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -974,7 +984,8 @@ textarea.form-control {
 }
 
 .auth-container {
-  background: var(--color-surface); /* Updated to --color-surface for better card visibility */
+  background: var(--color-surface);
+  /* Updated to --color-surface for better card visibility */
   padding: var(--space-8);
   border-radius: 8px;
   box-shadow: var(--shadow-lg);
@@ -986,7 +997,16 @@ textarea.form-control {
 
 @media (max-width: 480px) {
   .auth-container {
-    padding: var(--space-6) var(--space-4); /* Reduced padding to fit single-line button text */
+    padding: var(--space-6) var(--space-4);
+    /* Reduced padding to fit single-line button text */
+  }
+}
+
+/* Correct size alignment for tab view alone */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .auth-container {
+    max-width: 550px;
+    padding: var(--space-10); /* More spacious for tablets */
   }
 }
 
@@ -1064,10 +1084,46 @@ textarea.form-control {
   border-color: var(--color-primary);
 }
 
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper .auth-input {
+  padding-right: 48px; /* Room for the toggle button */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+  padding: 0;
+  z-index: 2;
+}
+
+.password-toggle:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-primary);
+}
+
+.password-toggle.active {
+  color: var(--color-primary);
+}
+
 .auth-btn {
   width: 100%;
   margin-top: var(--space-2);
-  white-space: nowrap; /* Prevent "Create Account" text from wrapping */
+  white-space: nowrap;
+  /* Prevent "Create Account" text from wrapping */
 }
 
 .auth-switch {
@@ -1156,7 +1212,8 @@ textarea.form-control {
 
 @media (max-width: 480px) {
   .social-auth-btns {
-    grid-template-columns: 1fr; /* Stack buttons vertically on small screens */
+    grid-template-columns: 1fr;
+    /* Stack buttons vertically on small screens */
   }
 }
 

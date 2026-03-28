@@ -10,7 +10,8 @@ html.dark {
   --color-surface-hover: #2a2a2a;
   --color-text: #e6e1d8;
   --color-text-muted: #a09a93;
-  --color-primary: #d4af37; /* Brighter gold for dark mode contrast */
+  --color-primary: #d4af37;
+  /* Brighter gold for dark mode contrast */
   --color-primary-hover: #b8952b;
   --color-border: #333333;
   --color-overlay: rgba(0, 0, 0, 0.8);
@@ -37,7 +38,8 @@ html.dark .form-control:focus {
 }
 
 html.dark .btn-primary {
-  color: #121212; /* Dark text on bright gold looks better */
+  color: #121212;
+  /* Dark text on bright gold looks better */
   font-weight: 600;
 }
 
@@ -55,5 +57,5 @@ html.dark .skeleton {
 }
 
 html.dark .skeleton::after {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
 }

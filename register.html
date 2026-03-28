@@ -39,7 +39,15 @@
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" id="password" name="password" class="auth-input" placeholder="••••••••" required>
+          <div class="password-wrapper">
+            <input type="password" id="password" name="password" class="auth-input" placeholder="••••••••" required>
+            <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
           <small style="color: var(--color-text-muted); font-size: 0.75rem; margin-top: 4px; display: block;">Must be at least 8 characters long.</small>
         </div>
         
