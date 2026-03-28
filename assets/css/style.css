@@ -206,7 +206,13 @@ button {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  gap: var(--space-4);
+  gap: var(--space-2);
+}
+
+@media (min-width: 1024px) {
+  .header-container {
+    gap: var(--space-4);
+  }
 }
 
 .logo-link {
@@ -226,7 +232,7 @@ button {
 
 .logo-text {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-primary);
   display: flex;
@@ -234,6 +240,12 @@ button {
   height: 100%;
   line-height: 1;
   white-space: nowrap;
+}
+
+@media (min-width: 480px) {
+  .logo-text {
+    font-size: 1.5rem;
+  }
 }
 
 .footer-logo-wrap {
@@ -339,20 +351,30 @@ button {
 .hamburger-menu {
   display: none;
   flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 18px;
-  background: transparent;
-  border: none;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
   cursor: pointer;
   padding: 0;
+  gap: 4px;
+  transition: all var(--transition-fast);
+}
+
+.hamburger-menu:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary);
 }
 
 .hamburger-menu span {
-  width: 100%;
+  width: 20px;
   height: 2px;
   background-color: var(--color-text);
   transition: all var(--transition-fast);
+  display: block;
 }
 
 @media (max-width: 1023px) {
@@ -378,7 +400,7 @@ button {
   }
 
   .hamburger-menu.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(6px) rotate(45deg);
   }
 
   .hamburger-menu.active span:nth-child(2) {
@@ -386,7 +408,12 @@ button {
   }
 
   .hamburger-menu.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Fix active underline position in mobile menu - move below the word */
+  .nav-menu a::after {
+    bottom: 0;
   }
 }
 
@@ -480,15 +507,19 @@ button {
   }
 
   .grid-3 {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     justify-content: center;
     gap: var(--space-4);
   }
 
-  .grid-3>* {
-    flex: 0 0 calc(50% - (var(--space-4) / 2));
-    min-width: 280px;
+  /* Centering the last (orphan) item in 2-column rows on Tablets */
+  .grid-3>*:nth-child(odd):last-child,
+  .designers-grid>*:nth-child(odd):last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 400px;
+    width: 100%;
   }
 
   .grid-4 {
@@ -545,10 +576,33 @@ button {
   }
 }
 
+/* Mobile only: center all content in Curating Modern section on Home 2 */
+@media (max-width: 599px) {
+  .curating-modern .journey-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-inline: var(--space-6);
+  }
+
+  .curating-modern .journey-content h2 {
+    text-align: center !important;
+  }
+}
+
 @media (min-width: 1024px) {
   .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-3>*:nth-child(odd):last-child,
+  .designers-grid>*:nth-child(odd):last-child {
+    grid-column: auto;
+    justify-self: stretch;
+    max-width: none;
+    width: auto;
   }
 
   .grid-3>* {
@@ -606,6 +660,10 @@ button {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+}
+
+.card-body .btn {
+  margin-top: auto;
 }
 
 .card-icon {
@@ -795,6 +853,11 @@ textarea.form-control {
   left: 0;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   animation: shimmer 1.5s infinite;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center !important;
 }
 
 @keyframes shimmer {
@@ -1169,7 +1232,7 @@ textarea.form-control {
   height: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .nav-desktop-only {
     display: none !important;
   }
@@ -1277,6 +1340,11 @@ textarea.form-control {
 .restoration-journey {
   background-color: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
+  padding-top: calc(var(--space-12) + var(--space-4));
+}
+
+.restoration-journey .section-header {
+  margin-top: var(--space-8);
 }
 
 .journey-step {
