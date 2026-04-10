@@ -73,6 +73,28 @@
     .card-price {
       text-align: center;
     }
+    /* Material Section Image Styles */
+    .material-image-container {
+      width: 140px;
+      height: 140px;
+      margin-bottom: var(--space-3);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+      background-color: var(--color-surface);
+    }
+    .material-item:hover .material-image-container {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary);
+    }
+    .material-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
@@ -88,11 +110,11 @@
             <nav class="nav-menu">
         <a href="index.html" class="">Home</a>
         <a href="home-2.html" class="active">Home 2</a>
+        <a href="about.html">About</a>
         <a href="shop.html">Shop</a>
         <a href="categories.html">Categories</a>
         <a href="gallery.html">Gallery</a>
         <a href="blog.html">Blog</a>
-        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
 
         <div class="nav-mobile-only mobile-auth-tray">
@@ -145,7 +167,7 @@
   <main class="main-content-section section-padding">
     <div class="container">
       <div class="section-header">
-        <h2>Latest Discoveries</h2>
+        <h2 class="vintage-title">Latest Discoveries</h2>
         <p>Explore our most recent acquisitions of vintage furniture and architectural accents.</p>
       </div>
       
@@ -215,17 +237,23 @@
       </div>
       <div class="grid-3">
         <div class="material-item fade-in">
-          <div class="material-icon">🌳</div>
+          <div class="material-image-container">
+            <img src="assets/images/reclaimed-oak.png" alt="Old Growth Oak" class="material-img">
+          </div>
           <h3 class="card-title">Old Growth Oak</h3>
           <p class="card-desc">Dense, slow-grown timber salvaged from 18th-century barns and estates.</p>
         </div>
         <div class="material-item fade-in" style="animation-delay: 0.1s">
-          <div class="material-icon">🔨</div>
+          <div class="material-image-container">
+            <img src="assets/images/hand-forged-iron.png" alt="Historic Iron" class="material-img">
+          </div>
           <h3 class="card-title">Historic Iron</h3>
           <p class="card-desc">Hand-forged wrought iron with unique hammer marks and authentic structural integrity.</p>
         </div>
         <div class="material-item fade-in" style="animation-delay: 0.2s">
-          <div class="material-icon">⚖️</div>
+          <div class="material-image-container">
+            <img src="assets/images/weathered brass.png.jpeg" alt="Weathered Brass" class="material-img">
+          </div>
           <h3 class="card-title">Weathered Brass</h3>
           <p class="card-desc">Solid brass elements with natural patina that only decades of exposure can create.</p>
         </div>
@@ -239,7 +267,7 @@
     <div class="section-padding">
       <div class="container">
         <div class="section-header">
-          <h2>Loved by Collectors</h2>
+          <h2 class="vintage-title">Loved by Collectors</h2>
           <p>What our clients say about their reclaimed treasures.</p>
         </div>
         <div class="grid-3">
@@ -275,7 +303,7 @@
           </div>
           <div class="journey-content" style="order: 1; padding-right: var(--space-8);">
             <span class="product-meta">Interior Inspiration</span>
-            <h2 class="vintage-title" style="text-align: left; font-size: 3rem;">Curating the Modern Home</h2>
+            <h2 class="vintage-title" style="text-align: left;">Curating the Modern Home</h2>
             <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-text-muted); margin-bottom: var(--space-4);">
               Integrating architectural salvage into a contemporary residence creates a unique dialogue between the past and the present. Our collection is curated specifically for designers who seek the "soul" of an object to anchor a modern space.
             </p>

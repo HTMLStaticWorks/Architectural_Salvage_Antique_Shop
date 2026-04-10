@@ -135,7 +135,7 @@ button {
   padding: var(--space-10) 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .section-padding {
     padding: var(--space-12) 0;
   }
@@ -209,7 +209,7 @@ button {
   gap: var(--space-2);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .header-container {
     gap: var(--space-4);
   }
@@ -377,7 +377,7 @@ button {
   display: block;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .nav-menu {
     position: fixed;
     top: var(--header-height);
@@ -482,7 +482,7 @@ button {
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
   margin-bottom: var(--space-2);
 }
 
@@ -567,7 +567,7 @@ button {
 }
 
 /* Specific Tablet Centering Overrides */
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 1024px) {
   .stats-grid {
     display: flex;
     flex-wrap: wrap;
@@ -601,7 +601,7 @@ button {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -736,7 +736,7 @@ button {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .footer-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -990,7 +990,7 @@ textarea.form-control {
   border-radius: 8px;
   box-shadow: var(--shadow-lg);
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   border: 1px solid var(--color-border);
   text-align: center;
 }
@@ -1003,16 +1003,16 @@ textarea.form-control {
 }
 
 /* Correct size alignment for tab view alone */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .auth-container {
     max-width: 550px;
     padding: var(--space-10); /* More spacious for tablets */
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .auth-container.register-wide {
-    max-width: 480px;
+    max-width: 450px;
   }
 
   .register-wide .auth-divider {
@@ -1149,7 +1149,7 @@ textarea.form-control {
   margin-bottom: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .login-page .auth-header {
     margin-bottom: var(--space-2);
   }
@@ -1302,7 +1302,7 @@ textarea.form-control {
   height: 100%;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .nav-desktop-only {
     display: none !important;
   }
